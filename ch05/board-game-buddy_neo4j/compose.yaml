@@ -1,0 +1,14 @@
+# tag::neo4j-compose[]
+services:
+  neo4j:
+    image: 'neo4j:latest'
+    environment:
+      - 'NEO4J_AUTH=neo4j/notverysecret'
+    ports:
+      - '7687:7687'
+      - '7474:7474'
+# end::neo4j-compose[]
+  qdrant:
+    image: 'qdrant/qdrant:latest'
+    ports:
+      - '6334'

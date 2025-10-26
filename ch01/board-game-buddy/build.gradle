@@ -1,0 +1,47 @@
+// tag::allButWiremock[]
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(24)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springAiVersion', "1.0.3")  // <1>
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // end::allButWiremock[]
+
+    // tag::wiremock[]
+    testImplementation 'org.wiremock.integrations:wiremock-spring-boot:3.9.0'
+    // end::wiremock[]
+    // tag::allButWiremock[]
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}" // <2>
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+// end::allButWiremock[]
