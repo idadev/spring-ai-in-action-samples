@@ -14,17 +14,17 @@ import java.util.Collection;
 import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
 import static org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor.FILTER_EXPRESSION;
 
-// tag::summarizeRules[]
+
 @Service
 public class SpringAiBoardGameService implements BoardGameService {
-// end::summarizeRules[]
+
 
   /*
-  // tag::summarizeRules[]
+  
 
   //...
 
-  // end::summarizeRules[]
+  
    */
 
   private final ChatClient chatClient;
@@ -36,20 +36,20 @@ public class SpringAiBoardGameService implements BoardGameService {
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
 
-  // tag::summarizeRules[]
+  
   @Value("classpath:/promptTemplates/summarizeSystemPrompt.st")
   Resource summaryPromptTemplate;   // <1>
-  // end::summarizeRules[]
+  
 
   /*
-  // tag::summarizeRules[]
+  
 
   //...
 
-  // end::summarizeRules[]
+  
    */
 
-  // tag::askQuestionWithTranslation[]
+  
   @Override
   public Answer askQuestion(Question question, String conversationId) {
     return chatClient.prompt()
@@ -65,7 +65,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .call()
         .entity(Answer.class);
   }
-  // end::askQuestionWithTranslation[]
+  
 
   @Override
   public Answer askQuestion(Question question,
@@ -90,7 +90,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .entity(Answer.class);
   }
 
-  // tag::summarizeRules[]
+  
   @Override
   public Answer summarizeRules(String text) {
     return chatClient.prompt()
@@ -102,14 +102,14 @@ public class SpringAiBoardGameService implements BoardGameService {
         .call()  // <2>
         .entity(Answer.class);
   }
-  // end::summarizeRules[]
+  
 
   /*
-  // tag::summarizeRules[]
+  
 
   //...
 
-  // end::summarizeRules[]
+  
    */
 
   private String normalizeGameTitle(String in) {
@@ -134,7 +134,7 @@ public class SpringAiBoardGameService implements BoardGameService {
     return "";
   }
 
-  // tag::summarizeRules[]
+  
 }
-// end::summarizeRules[]
+
 

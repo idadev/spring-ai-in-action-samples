@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-// tag::injectGameRulesService[]
+
 @Service
 public class SpringAiBoardGameService implements BoardGameService {
 
@@ -20,13 +20,13 @@ public class SpringAiBoardGameService implements BoardGameService {
   }
 
   // ...
-// end::injectGameRulesService[]
+
 
 
   @Value("classpath:/promptTemplates/questionPromptTemplate.st")
   Resource questionPromptTemplate;
 
-  // tag::stuffThePrompt[]
+  
   @Override
   public Answer askQuestion(Question question) {
     var gameRules = gameRulesService.getRulesFor(question.gameTitle());
@@ -42,8 +42,8 @@ public class SpringAiBoardGameService implements BoardGameService {
 
     return new Answer(question.gameTitle(), answerText);
   }
-  // end::stuffThePrompt[]
+  
 
-  // tag::injectGameRulesService[]
+  
 }
-// end::injectGameRulesService[]
+

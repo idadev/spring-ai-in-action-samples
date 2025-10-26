@@ -12,7 +12,7 @@ public class AskController {
     this.boardGameService = boardGameService;
   }
 
-  // tag::audioAskAudioResponseDirect[]
+  
   @PostMapping(path="/audioAsk", produces = "audio/mpeg")
   public byte[] audioAskAudioResponse(
       @RequestHeader(name="X_AI_CONVERSATION_ID",
@@ -26,6 +26,6 @@ public class AskController {
         questionWithAudio, conversationId);
     return answer.answerAudio();
   }
-  // end::audioAskAudioResponseDirect[]
+  
 
 }

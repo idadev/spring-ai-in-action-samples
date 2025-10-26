@@ -26,7 +26,7 @@ public class AskController {
     this.moderationService = moderationService;
   }
 
-  // tag::askMethod[]
+  
   @PostMapping(path = "/ask", produces = "application/json")
   public Answer ask(
       @AuthenticationPrincipal UserDetails userDetails,
@@ -39,7 +39,7 @@ public class AskController {
     return boardGameService.askQuestion(question,
         userDetails.getUsername() + "_" + conversationId);
   }
-  // end::askMethod[]
+  
 
   @PostMapping(path="/audioAsk", produces = "application/json")
   public Answer audioAsk(

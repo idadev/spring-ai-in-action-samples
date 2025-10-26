@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AiConfig {
 
-  // tag::chatClientBean[]
+  
   @Bean
   ChatClient chatClient(ChatClient.Builder chatClientBuilder, VectorStore vectorStore) {
     return chatClientBuilder
@@ -21,6 +21,6 @@ public class AiConfig {
                 .searchRequest(SearchRequest.builder().build()).build())
         .build();
   }
-  // end::chatClientBean[]
+  
 
 }

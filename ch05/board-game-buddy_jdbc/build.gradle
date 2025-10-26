@@ -26,9 +26,9 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-model-openai'
     implementation 'org.springframework.ai:spring-ai-starter-vector-store-qdrant'
     implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
-    // tag::jdbc-chat-memory-dependency[]
+    
     implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-repository-jdbc'
-    // end::jdbc-chat-memory-dependency[]
+    
     runtimeOnly 'org.postgresql:postgresql'
 
 

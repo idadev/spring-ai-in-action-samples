@@ -1,4 +1,4 @@
-// tag::all[]
+
 package com.example.boardgamebuddy;
 
 import org.springframework.ai.chat.client.ChatClient;
@@ -11,13 +11,13 @@ import org.springframework.retry.annotation.Retryable;
 
 import java.util.List;
 
-// end::all[]
+
 /*
-// tag::all[]
+
 @Service
-// end::all[]
+
 */
-// tag::all[]
+
 public class SelfEvaluatingBoardGameService implements BoardGameService {
 
   private final ChatClient chatClient;
@@ -63,4 +63,4 @@ public class SelfEvaluatingBoardGameService implements BoardGameService {
   }
 
 }
-// end::all[]
+

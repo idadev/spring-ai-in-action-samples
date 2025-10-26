@@ -43,7 +43,7 @@ public class GameRulesLoaderApplication {
     };
   }
 
-  // tag::newDocumentReader[]
+  
   @Bean
   Function<Flux<Message<byte[]>>, Flux<Document>> documentReader() {
     return resourceFlux -> resourceFlux
@@ -69,7 +69,7 @@ public class GameRulesLoaderApplication {
         .substring(0, fileName.toString().lastIndexOf('.'));
     return baseFilename.endsWith("-premium");
   }
-  // end::newDocumentReader[]
+  
 
   @Bean
   Function<Flux<Document>, Flux<List<Document>>> splitter() {

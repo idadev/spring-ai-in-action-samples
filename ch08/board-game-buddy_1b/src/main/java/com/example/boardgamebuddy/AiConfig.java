@@ -20,7 +20,7 @@ public class AiConfig {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(AiConfig.class);
 
-  // tag::defaultFunctions[]
+  
   @Bean
   ChatClient chatClient(ChatClient.Builder chatClientBuilder, VectorStore vectorStore) {
     return chatClientBuilder
@@ -31,10 +31,10 @@ public class AiConfig {
         .defaultToolNames("gameComplexityFunction")
         .build();
   }
-  // end::defaultFunctions[]
+  
 
 //  @Bean
-  // tag::gameData_functionBean[]
+  
   @Description("Returns a game's complexity/difficulty " +
       "given the game's title/name.")
   Function<GameComplexityRequest, GameComplexityResponse>
@@ -64,6 +64,6 @@ public class AiConfig {
     };
 
   }
-  // end::gameData_functionBean[]
+  
 
 }

@@ -26,7 +26,7 @@ public class SpringAiBoardGameService implements BoardGameService {
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
 
-  // tag::newAskQuestion[]
+  
   @Override
   public Answer askQuestion(Question question, String conversationId) {
     return chatClient.prompt()
@@ -41,7 +41,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .call()
         .entity(Answer.class);
   }
-  // end::newAskQuestion[]
+  
 
   @Override
   public Answer askQuestion(Question question,
@@ -70,7 +70,7 @@ public class SpringAiBoardGameService implements BoardGameService {
     return in.toLowerCase().replace(' ', '_');
   }
 
-  // tag::getDocumentMatchExpression[]
+  
   private String getDocumentMatchExpression(String gameTitle) {
     return String.format("gameTitle == '%s' %s",
           normalizeGameTitle(gameTitle),
@@ -88,6 +88,6 @@ public class SpringAiBoardGameService implements BoardGameService {
 
     return "";
   }
-  // end::getDocumentMatchExpression[]
+  
 
 }

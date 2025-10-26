@@ -1,11 +1,11 @@
-// tag::stringTemplate[]
+
 package com.example.boardgamebuddy;
 
 import org.springframework.ai.chat.client.ChatClient;
-// end::stringTemplate[]
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
-// tag::stringTemplate[]
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,21 +17,21 @@ public class SpringAiBoardGameService implements BoardGameService {
     this.chatClient = chatClientBuilder.build(); // <2>
   }
 
-  // end::stringTemplate[]
+  
 
   /*
-  // tag::stringTemplate[]
+  
   private static final String questionPromptTemplate = """ // <1>
       Answer this question about {game}: {question}
       """;
-  // end::stringTemplate[]
+  
   */
 
-  // tag::resourceTemplate[]
+  
   @Value("classpath:/promptTemplates/questionPromptTemplate.st")
   Resource questionPromptTemplate;
-  // end::resourceTemplate[]
-  // tag::stringTemplate[]
+  
+  
 
   @Override
   public Answer askQuestion(Question question) {
@@ -47,4 +47,4 @@ public class SpringAiBoardGameService implements BoardGameService {
   }
 
 }
-// end::stringTemplate[]
+

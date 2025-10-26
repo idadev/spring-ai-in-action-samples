@@ -14,14 +14,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AiConfig {
 
-  // tag::chatMemoryBean[]
+  
   @Bean
   ChatMemory chatMemory(ChatMemoryRepository chatMemoryRepository) {
     return MessageWindowChatMemory.builder()
         .chatMemoryRepository(chatMemoryRepository)
         .build();
   }
-  // end::chatMemoryBean[]
+  
 
   @Bean
   ChatClient chatClient(

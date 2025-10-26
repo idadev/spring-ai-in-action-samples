@@ -34,7 +34,7 @@ public class GameRulesLoaderApplication {
     SpringApplication.run(GameRulesLoaderApplication.class, args);
   }
 
-  // tag::goApplicationRunner[]
+  
   @Bean
   ApplicationRunner go(FunctionCatalog catalog) {
     Runnable composedFunction = catalog.lookup(null);
@@ -42,9 +42,9 @@ public class GameRulesLoaderApplication {
       composedFunction.run();
     };
   }
-  // end::goApplicationRunner[]
+  
 
-  // tag::documentReaderFunction[]
+  
   @Bean
   Function<Flux<byte[]>, Flux<Document>> documentReader() {
     return resourceFlux -> resourceFlux
@@ -54,9 +54,9 @@ public class GameRulesLoaderApplication {
           .get()
           .getFirst()).subscribeOn(Schedulers.boundedElastic());
   }
-  // end::documentReaderFunction[]
+  
 
-  // tag::splitterFunction[]
+  
   @Bean
   Function<Flux<Document>, Flux<List<Document>>> splitter() {
     return documentFlux ->
@@ -64,12 +64,12 @@ public class GameRulesLoaderApplication {
             .map(incoming ->
                 new TokenTextSplitter().apply(List.of(incoming))).subscribeOn(Schedulers.boundedElastic());
   }
-  // end::splitterFunction[]
+  
 
   @Value("classpath:/promptTemplates/nameOfTheGame.st")
   Resource nameOfTheGameTemplateResource;
 
-  // tag::titleDeterminer[]
+  
   @Bean
   Function<Flux<List<Document>>, Flux<List<Document>>>
               titleDeterminer(ChatClient.Builder chatClientBuilder) {
@@ -104,9 +104,9 @@ public class GameRulesLoaderApplication {
           return documents;
         });
   }
-  // end::titleDeterminer[]
+  
 
-  // tag::vectorStoreConsumer[]
+  
   @Bean
   Consumer<Flux<List<Document>>> vectorStoreConsumer(VectorStore vectorStore) {
     return documentFlux -> documentFlux
@@ -120,6 +120,6 @@ public class GameRulesLoaderApplication {
       })
       .subscribe();
   }
-  // end::vectorStoreConsumer[]
+  
 
 }

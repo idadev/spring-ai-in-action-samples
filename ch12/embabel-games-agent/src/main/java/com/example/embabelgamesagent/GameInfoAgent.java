@@ -1,4 +1,4 @@
-// tag::skeleton[]
+
 package com.example.embabelgamesagent;
 
 import com.embabel.agent.api.annotation.AchievesGoal;
@@ -27,36 +27,36 @@ public class GameInfoAgent {
   private static final Logger LOGGER =
       LoggerFactory.getLogger(GameInfoAgent.class);
 
-  // end::skeleton[]
+  
 
   //
   // Prompt template resources
   //
-  // tag::extractGameTitle[]
+  
   @Value("classpath:/promptTemplates/determineTitle.st")  // <1>
   Resource determineTitlePromptTemplate;
 
-  // end::extractGameTitle[]
+  
 
-  // tag::getGameRulesFilename[]
+  
   @Value("classpath:/promptTemplates/rulesFetcher.st")  // <1>
   Resource rulesFetcherPromptTemplate;
 
-  // end::getGameRulesFilename[]
+  
 
-  // tag::determinePlayerCount[]
+  
   @Value("classpath:/promptTemplates/playerCount.st")  // <1>
   Resource playerCountPromptTemplate;
 
-  // end::determinePlayerCount[]
+  
 
-  // tag::determineGameMechanics[]
+  
   @Value("classpath:/promptTemplates/mechanicsDeterminer.st")  // <1>
   Resource mechanicsDeterminerPromptTemplate;
 
-  // end::determineGameMechanics[]
+  
 
-  // tag::skeleton[]
+  
   private final String rulesFilePath;
 
   public GameInfoAgent(
@@ -65,12 +65,12 @@ public class GameInfoAgent {
   }
 
   // ...action methods go here...
-  // end::skeleton[]
+  
 
   //
   // Actions
   //
-  // tag::extractGameTitle[]
+  
   @Action
   public GameTitle extractGameTitle(UserInput userInput) {
     LOGGER.info("Extracting game title from user input");
@@ -81,9 +81,9 @@ public class GameInfoAgent {
     return PromptRunner.usingLlm()
         .createObject(prompt, GameTitle.class); // <3>
   }
-  // end::extractGameTitle[]
+  
 
-  // tag::getGameRulesFilename[]
+  
   @Action
   public RulesFile getGameRulesFilename(GameTitle gameTitle) {
     LOGGER.info("Getting game rules filename for: " + gameTitle.gameTitle());
@@ -94,9 +94,9 @@ public class GameInfoAgent {
     return PromptRunner.usingLlm()
         .createObject(prompt, RulesFile.class);  // <3>
   }
-  // end::getGameRulesFilename[]
+  
 
-  // tag::getGameRules[]
+  
   @Action
   public GameRules getGameRules(GameTitle gameTitle, RulesFile rulesFile) {
     LOGGER.info("Getting game rules for: " + gameTitle.gameTitle()
@@ -117,9 +117,9 @@ public class GameInfoAgent {
     throw new ActionFailedException(
         "Unable to fetch rules for the specified game.");  // <3>
   }
-  // end::getGameRules[]
+  
 
-  // tag::determinePlayerCount[]
+  
   @Action
   @AchievesGoal(description = "Player count has been determined.") // <2>
   public PlayerCount determinePlayerCount(GameRules gameRules) {
@@ -132,9 +132,9 @@ public class GameInfoAgent {
     return PromptRunner.usingLlm()
         .createObject(prompt, PlayerCount.class);  // <4>
   }
-  // end::determinePlayerCount[]
+  
 
-  // tag::determineGameMechanics[]
+  
   @Action
   @AchievesGoal(description = "Game mechanics have been determined.")  // <2>
   public GameMechanics determineGameMechanics(GameRules gameRules) {
@@ -147,12 +147,12 @@ public class GameInfoAgent {
     return PromptRunner.usingLlm()
         .createObject(prompt, GameMechanics.class); // <4>
   }
-  // end::determineGameMechanics[]
+  
 
   //
   // Helper Methods
   //
-  // tag::promptResourceToString[]
+  
   private String promptResourceToString(Resource resource, Map<String, String> params) {
     try {
       var promptString = resource.getContentAsString(Charset.defaultCharset());
@@ -164,9 +164,9 @@ public class GameInfoAgent {
       return "";
     }
   }
-  // end::promptResourceToString[]
+  
 
-  // tag::skeleton[]
+  
 
 }
-// end::skeleton[]
+

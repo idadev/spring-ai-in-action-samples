@@ -1,10 +1,10 @@
 package com.example.boardgamebuddy;
 
-  // tag::ask[]
+  
   import static org.springframework.ai.chat.client.advisor
       .vectorstore.QuestionAnswerAdvisor.FILTER_EXPRESSION;
 
-  // end::ask[]
+  
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,7 +23,7 @@ public class SpringAiBoardGameService implements BoardGameService {
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
 
-  // tag::ask[]
+  
   @Override
   public Answer askQuestion(Question question) {
     var gameNameMatch = String.format(
@@ -40,7 +40,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .call()
         .entity(Answer.class);
   }
-  // end::ask[]
+  
 
   private String normalizeGameTitle(String in) {
     return in.toLowerCase().replace(' ', '_');

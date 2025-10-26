@@ -1,4 +1,4 @@
-# tag::cassandra-compose[]
+
 services:
   cassandra:
     image: 'cassandra:latest'
@@ -7,7 +7,7 @@ services:
       - 'CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch'
     ports:
       - '9042:9042'
-# end::cassandra-compose[]
+
   qdrant:
     image: 'qdrant/qdrant:latest'
     ports:

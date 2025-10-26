@@ -11,7 +11,7 @@ public class AiService {
 
   private final ChatClient chatClient;
 
-  // tag::canaryword-advisor[]
+  
   public AiService(ChatClient.Builder chatClientBuilder) {
     var canaryWordAdvisor = CanaryWordAdvisor.builder()
         .canaryWordFoundMessage(
@@ -27,7 +27,7 @@ public class AiService {
         // ...
         .build();
   }
-  // end::canaryword-advisor[]
+  
 
   public String ask(String question) {
     return chatClient.prompt()

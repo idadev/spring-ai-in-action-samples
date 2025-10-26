@@ -17,7 +17,7 @@ public class AiConfig {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(AiConfig.class);
 
-  // tag::chatClientBean_defTools[]
+  
   @Bean
   ChatClient chatClient(ChatClient.Builder chatClientBuilder,
                         VectorStore vectorStore) {
@@ -30,6 +30,6 @@ public class AiConfig {
         .defaultToolNames("gameTools")
         .build();
   }
-  // end::chatClientBean_defTools[]
+  
 
 }

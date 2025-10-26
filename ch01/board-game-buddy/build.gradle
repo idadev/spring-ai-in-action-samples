@@ -1,4 +1,4 @@
-// tag::allButWiremock[]
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.5.5'
@@ -27,12 +27,12 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-model-openai'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    // end::allButWiremock[]
+    
 
-    // tag::wiremock[]
+    
     testImplementation 'org.wiremock.integrations:wiremock-spring-boot:3.9.0'
-    // end::wiremock[]
-    // tag::allButWiremock[]
+    
+    
 }
 
 dependencyManagement {
@@ -44,4 +44,4 @@ dependencyManagement {
 tasks.named('test') {
     useJUnitPlatform()
 }
-// end::allButWiremock[]
+

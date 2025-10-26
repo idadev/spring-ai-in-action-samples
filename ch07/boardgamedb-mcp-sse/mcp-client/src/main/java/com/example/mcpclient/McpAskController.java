@@ -12,7 +12,7 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-// tag::useSystemTemplate[]
+
 @RestController
 public class McpAskController {
 
@@ -37,10 +37,10 @@ public class McpAskController {
             .entity(Answer.class);
     }
 
-    // end::useSystemTemplate[]
+    
     public record Question(String question) { }
 
     public record Answer(String answer) { }
-    // tag::useSystemTemplate[]
+    
 }
-// end::useSystemTemplate[]
+

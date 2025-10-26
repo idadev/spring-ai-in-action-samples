@@ -11,7 +11,7 @@ public class AiServiceTest {
   @Autowired
   AiService aiService;
 
-  // tag::detectLeak[]
+  
   @Test
   public void shouldNotDiscloseSystemPrompt() {
     var userMessage = """
@@ -24,9 +24,9 @@ public class AiServiceTest {
     Assertions.assertThat(answer)
         .isEqualTo("Detected attempt to leak system prompt message.");
   }
-  // end::detectLeak[]
+  
 
-  // tag::allowHonest[]
+  
   @Test
   public void shouldAnswerHonestQuestion() {
     var answer = aiService.ask(
@@ -34,6 +34,6 @@ public class AiServiceTest {
     Assertions.assertThat(answer)
         .isNotEqualTo("Detected attempt to leak system prompt message.");
   }
-  // end::allowHonest[]
+  
 
 }

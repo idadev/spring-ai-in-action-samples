@@ -18,14 +18,14 @@ public class AiService {
             "We don't talk about UNO. But...")
         .build();
 
-    // tag::safeguard-advisor[]
+    
     this.chatClient = chatClientBuilder
     // ...
         .defaultAdvisors(safeGuardAdvisor)
     // ...
         .build();
   }
-  // end::safeguard-advisor[]
+  
 
   public String ask(String question) {
     return chatClient.prompt()

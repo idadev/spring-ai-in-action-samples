@@ -55,7 +55,7 @@ public class AskController {
     return voiceService.textToSpeech(answer.answer());
   }
 
-  // tag::visionAsk[]
+  
   @PostMapping(path="/visionAsk",
                produces = "application/json",
                consumes = "multipart/form-data")
@@ -73,6 +73,6 @@ public class AskController {
     return boardGameService.askQuestion(
         question, imageResource, imageContentType, conversationId); // <4>
   }
-  // end::visionAsk[]
+  
 
 }

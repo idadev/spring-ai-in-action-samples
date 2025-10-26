@@ -26,12 +26,12 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-vector-store-qdrant'
     implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
 
-    // tag::jdbcDependencies[]
+    
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-    // end::jdbcDependencies[]
-    // tag::dbDependencies[]
+    
+    
     runtimeOnly 'com.h2database:h2'
-    // end::dbDependencies[]
+    
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.testcontainers:junit-jupiter'

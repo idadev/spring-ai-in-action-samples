@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 @Configuration
 public class AiConfig {
 
-  // tag::chatMemoryRepositoryBean[]
+  
   @Bean
   ChatMemoryRepository chatMemoryRepository(DataSource dataSource) {
     return JdbcChatMemoryRepository.builder()
@@ -26,7 +26,7 @@ public class AiConfig {
         .dataSource(dataSource)
         .build();
   }
-  // end::chatMemoryRepositoryBean[]
+  
 
   @Bean
   ChatMemory chatMemory(ChatMemoryRepository chatMemoryRepository) {

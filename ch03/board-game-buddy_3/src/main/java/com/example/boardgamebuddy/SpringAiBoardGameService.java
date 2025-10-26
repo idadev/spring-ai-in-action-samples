@@ -18,12 +18,12 @@ public class SpringAiBoardGameService implements BoardGameService {
     this.gameRulesService = gameRulesService;
   }
 
-  // tag::systemPromptTemplate[]
+  
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
-  // end::systemPromptTemplate[]
+  
 
-  // tag::askMethod[]
+  
   @Override
   public Answer askQuestion(Question question) {
     var gameRules = gameRulesService.getRulesFor(question.gameTitle());
@@ -39,6 +39,6 @@ public class SpringAiBoardGameService implements BoardGameService {
 
     return new Answer(question.gameTitle(), answerText);
   }
-  // end::askMethod[]
+  
 
 }

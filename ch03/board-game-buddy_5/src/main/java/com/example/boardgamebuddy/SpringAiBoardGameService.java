@@ -22,7 +22,7 @@ public class SpringAiBoardGameService implements BoardGameService {
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
 
-  // tag::streamingAsk[]
+  
   @Override
   public Flux<String> askQuestion(Question question) {   // <1>
     var gameRules = gameRulesService.getRulesFor(question.gameTitle());
@@ -36,6 +36,6 @@ public class SpringAiBoardGameService implements BoardGameService {
         .stream()         // <2>
         .content();
   }
-  // end::streamingAsk[]
+  
 
 }

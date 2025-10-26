@@ -40,7 +40,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .entity(Answer.class);
   }
 
-  // tag::askQuestionWithImage[]
+  
   @Override
   public Answer askQuestion(Question question,
                             Resource image,            // <1>
@@ -66,7 +66,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .call()
         .entity(Answer.class);
   }
-  // end::askQuestionWithImage[]
+  
 
   private String normalizeGameTitle(String in) {
     return in.toLowerCase().replace(' ', '_');

@@ -1,9 +1,9 @@
 package com.example.boardgamebuddy;
 
-// tag::filterExpressionImport[]
+
 import static org.springframework.ai.rag.retrieval.search
     .VectorStoreDocumentRetriever.FILTER_EXPRESSION;
-// end::filterExpressionImport[]
+
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,7 +28,7 @@ public class SpringAiBoardGameService implements BoardGameService {
             "gameTitle == '%s'",
             normalizeGameTitle(question.gameTitle()));
 
-    // tag::ask[]
+    
     return chatClient.prompt()
         .system(systemSpec -> systemSpec
             .text(promptTemplate)
@@ -38,7 +38,7 @@ public class SpringAiBoardGameService implements BoardGameService {
             advisorSpec.param(FILTER_EXPRESSION, gameNameMatch)) // <1>
         .call()
         .entity(Answer.class);
-    // end::ask[]
+    
   }
 
   private String normalizeGameTitle(String in) {

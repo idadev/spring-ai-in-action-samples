@@ -1,18 +1,18 @@
-# tag::mcpConfig[]
-# tag::claudeConfig[]
+
+
 spring:
-# end::claudeConfig[]
-# end::mcpConfig[]
+
+
   application:
     name: mcp-filesystem-client
 
-# tag::mcpConfig[]
-# tag::claudeConfig[]
+
+
   ai:
     mcp:
       client:
         stdio:
-# end::claudeConfig[]
+
           connections:
             filesystem:  # <1>
               command: 'npx' # <2>
@@ -23,4 +23,4 @@ spring:
 
         toolcallback:
           enabled: true
-# end::mcpConfig[]
+

@@ -1,4 +1,4 @@
-// tag::boardGameServiceConstructor[]
+
 package com.example.boardgamebuddy;
 
 import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
@@ -13,12 +13,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class SpringAiBoardGameService implements BoardGameService {
 
-  // end::boardGameServiceConstructor[]
+  
 
   /*
-  // tag::boardGameServiceConstructor[]
+  
   // ...
-  // end::boardGameServiceConstructor[]
+  
    */
 
   private final ChatClient chatClient;
@@ -30,7 +30,7 @@ public class SpringAiBoardGameService implements BoardGameService {
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
 
-  // tag::askControllerAsk_conversationId[]
+  
   @Override
   public Answer askQuestion(Question question, String conversationId) {
     var gameNameMatch = String.format(
@@ -48,18 +48,18 @@ public class SpringAiBoardGameService implements BoardGameService {
         .call()
         .entity(Answer.class);
   }
-  // end::askControllerAsk_conversationId[]
+  
 
   private String normalizeGameTitle(String in) {
     return in.toLowerCase().replace(' ', '_');
   }
 
   /*
-  // tag::boardGameServiceConstructor[]
+  
   // ...
-  // end::boardGameServiceConstructor[]
+  
    */
 
-  // tag::boardGameServiceConstructor[]
+  
 }
-// end::boardGameServiceConstructor[]
+

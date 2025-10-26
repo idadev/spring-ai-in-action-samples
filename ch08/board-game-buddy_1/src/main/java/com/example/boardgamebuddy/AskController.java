@@ -1,4 +1,4 @@
-// tag::injectTranscriptionService[]
+
 package com.example.boardgamebuddy;
 
 import org.springframework.core.io.Resource;
@@ -20,14 +20,14 @@ public class AskController {
     this.boardGameService = boardGameService;
     this.voiceService = voiceService;
   }
-  // end::injectTranscriptionService[]
+  
 
   /*
-    // tag::injectTranscriptionService[]
+    
 
   // ...
 
-    // end::injectTranscriptionService[]
+    
    */
 
 
@@ -39,7 +39,7 @@ public class AskController {
     return boardGameService.askQuestion(question, conversationId);
   }
 
-  // tag::audioAsk[]
+  
   @PostMapping(path="/audioAsk", produces = "application/json") // <1>
   public Answer audioAsk(
       @RequestHeader(name="X_AI_CONVERSATION_ID",
@@ -51,9 +51,9 @@ public class AskController {
     var transcribedQuestion = new Question(gameTitle, transcription);
     return boardGameService.askQuestion(transcribedQuestion, conversationId);
   }
-  // end::audioAsk[]
+  
 
-  // tag::textToSpeechBytes[]
+  
   @PostMapping(path="/audioAsk", produces = "audio/mpeg")
   public Resource audioAskAudioResponse(
       @RequestHeader(name="X_AI_CONVERSATION_ID",
@@ -67,9 +67,9 @@ public class AskController {
             transcribedQuestion, conversationId);
     return voiceService.textToSpeech(answer.answer());
   }
-  // end::textToSpeechBytes[]
+  
 
 
-  // tag::injectTranscriptionService[]
+  
 }
-// end::injectTranscriptionService[]
+

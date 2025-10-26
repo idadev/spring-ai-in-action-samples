@@ -21,7 +21,7 @@ public class McpConfig {
   }
 
 //  @Bean
-// tag::gamePrompts[]
+
   public List<McpServerFeatures.SyncPromptSpecification> gamePrompts() {
     var playerCountPrompt = new McpSchema.Prompt(  // <1>
         "gamesForPlayerCount",
@@ -66,11 +66,11 @@ public class McpConfig {
 
     return List.of(playerCountPromptSpec, playingTimePromptSpec); // <4>
   }
-  // end::gamePrompts[]
+  
 
 
 //  @Bean
-  // tag::resources[]
+  
   public List<McpServerFeatures.SyncResourceSpecification>
       gameResources(GameRepository gameRepository) {
     List<McpSchema.Role> audience = List.of(McpSchema.Role.USER);
@@ -102,24 +102,24 @@ public class McpConfig {
 
     return List.of(gameListResourceSpec);  // <4>
   }
-  // end::resources[]
+  
 
-  // tag::promptAnnotationBean[]
+  
   @Bean
   List<McpServerFeatures.SyncPromptSpecification> myPrompts(
           PromptProvider promptProvider) {
     return SpringAiMcpAnnotationProvider
         .createSyncPromptSpecifications(List.of(promptProvider));
   }
-  // end::promptAnnotationBean[]
+  
 
-  // tag::resourceAnnotationBean[]
+  
   @Bean
   public List<McpServerFeatures.SyncResourceSpecification> myResources(
           ResourceProvider resourceProvider) {
     return SpringAiMcpAnnotationProvider
         .createSyncResourceSpecifications(List.of(resourceProvider));
   }
-  // end::resourceAnnotationBean[]
+  
 
 }

@@ -28,7 +28,7 @@ public class SpringAiBoardGameService implements BoardGameService {
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
 
-  // tag::askQuestion[]
+  
   @Override
   public AudioAnswer askQuestion(AudioQuestion question, String conversationId) {
     var gameNameMatch = String.format(
@@ -67,7 +67,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .getDataAsByteArray();      // <4>
     return new AudioAnswer(question.gameTitle(), answerAudio);
   }
-  // end::askQuestion[]
+  
 
 
   private String normalizeGameTitle(String in) {

@@ -27,9 +27,9 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-vector-store-qdrant'
     implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
 
-    // tag::ragDependency[]
+    
     implementation 'org.springframework.ai:spring-ai-rag'
-    // end::ragDependency[]
+    
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.testcontainers:junit-jupiter'

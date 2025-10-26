@@ -1,4 +1,4 @@
-// tag::relevancy[]
+
 package com.example.boardgamebuddy;
 
 import org.assertj.core.api.Assertions;
@@ -6,9 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.evaluation.RelevancyEvaluator;
-// end::relevancy[]
+
 import org.springframework.ai.chat.evaluation.FactCheckingEvaluator;
-// tag::relevancy[]
+
 import org.springframework.ai.evaluation.EvaluationRequest;
 import org.springframework.ai.evaluation.EvaluationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,20 +25,20 @@ public class SpringAiBoardGameServiceTests {
 
   private RelevancyEvaluator relevancyEvaluator;
 
-  // end::relevancy[]
-  // tag::correctness[]
+  
+  
   private FactCheckingEvaluator factCheckingEvaluator;
 
-  // tag::relevancy[]
+  
   @BeforeEach
   public void setup() {
     this.relevancyEvaluator = new RelevancyEvaluator(chatClientBuilder);
-    // end::relevancy[]
+    
     this.factCheckingEvaluator = new FactCheckingEvaluator(
         chatClientBuilder);
-    // tag::relevancy[]
+    
   }
-  // end::correctness[]
+  
 
   @Test
   public void evaluateRelevancy() {
@@ -63,8 +63,8 @@ public class SpringAiBoardGameServiceTests {
         .isTrue();
   }
 
-  // end::relevancy[]
-  // tag::correctnessTest[]
+  
+  
   @Test
   public void evaluateFactualAccuracy() {
     var userText = "Why is the sky blue?";
@@ -88,8 +88,8 @@ public class SpringAiBoardGameServiceTests {
           """, answer.answer(), userText)
         .isTrue();
   }
-  // end::correctnessTest[]
+  
 
-// tag::relevancy[]
+
 }
-// end::relevancy[]
+

@@ -86,7 +86,7 @@ public class GameInfoAgent {
     throw new ActionFailedException("Unable to fetch rules for the specified game.");
   }
 
-  // tag::achievesGoalExport[]
+  
   @Action
   @AchievesGoal(description = "Player count has been determined.",
       export = @Export(
@@ -95,14 +95,14 @@ public class GameInfoAgent {
           startingInputTypes = UserInput.class))
   public PlayerCount determinePlayerCount(GameRules gameRules) {
     // ...
-    // end::achievesGoalExport[]
+    
     LOGGER.info("Determining player count from rules for: {}",
                 gameRules.gameTitle());
     var prompt = promptResourceToString(playerCountPromptTemplate,
         Map.of("gameRules", gameRules.rulesText()));
     return PromptRunner.usingLlm()
         .createObject(prompt, PlayerCount.class);
-    // tag::achievesGoalExport[]
+    
   }
 
   @Action
@@ -113,16 +113,16 @@ public class GameInfoAgent {
           startingInputTypes = UserInput.class))
   public GameMechanics determineGameMechanics(GameRules gameRules) {
     // ...
-    // end::achievesGoalExport[]
+    
     LOGGER.info("Determining mechanics from rules for: {}",
                 gameRules.gameTitle());
     var prompt = promptResourceToString(mechanicsDeterminerPromptTemplate,
         Map.of("gameRules", gameRules.rulesText()));
     return PromptRunner.usingLlm()
         .createObject(prompt, GameMechanics.class);
-    // tag::achievesGoalExport[]
+    
   }
-  // end::achievesGoalExport[]
+  
 
   //
   // Helper Methods

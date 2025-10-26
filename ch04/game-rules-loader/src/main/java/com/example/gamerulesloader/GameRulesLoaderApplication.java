@@ -28,17 +28,17 @@ import reactor.core.scheduler.Schedulers;
 @SpringBootApplication
 public class GameRulesLoaderApplication {
 
-  // tag::titleDeterminer[]
+  
   private static final Logger LOGGER =
       LoggerFactory.getLogger(GameRulesLoaderApplication.class);
 
-  // end::titleDeterminer[]
+  
 
   public static void main(String[] args) {
     SpringApplication.run(GameRulesLoaderApplication.class, args);
   }
 
-  // tag::goApplicationRunner[]
+  
   @Bean
   ApplicationRunner go(FunctionCatalog catalog) {
     Runnable composedFunction = catalog.lookup(null);
@@ -46,9 +46,9 @@ public class GameRulesLoaderApplication {
       composedFunction.run();
     };
   }
-  // end::goApplicationRunner[]
+  
 
-  // tag::documentReaderFunction[]
+  
   @Bean
   Function<Flux<byte[]>, Flux<Document>> documentReader() {
     return resourceFlux -> resourceFlux
@@ -58,9 +58,9 @@ public class GameRulesLoaderApplication {
           .get()
           .getFirst()).subscribeOn(Schedulers.boundedElastic());
   }
-  // end::documentReaderFunction[]
+  
 
-  // tag::splitterFunction[]
+  
   @Bean
   Function<Flux<Document>, Flux<List<Document>>> splitter() {
     var splitter = new TokenTextSplitter();
@@ -70,9 +70,9 @@ public class GameRulesLoaderApplication {
                 .apply(List.of(incoming)))
             .subscribeOn(Schedulers.boundedElastic());
   }
-  // end::splitterFunction[]
+  
 
-  // tag::titleDeterminer[]
+  
   @Value("classpath:/promptTemplates/nameOfTheGame.st")
   Resource nameOfTheGameTemplateResource;
 
@@ -111,9 +111,9 @@ public class GameRulesLoaderApplication {
           return documents;
         });
   }
-  // end::titleDeterminer[]
+  
 
-  // tag::vectorStoreConsumer[]
+  
   @Bean
   Consumer<Flux<List<Document>>> vectorStoreConsumer(VectorStore vectorStore) {
     return documentFlux -> documentFlux
@@ -130,6 +130,6 @@ public class GameRulesLoaderApplication {
       })
       .subscribe();
   }
-  // end::vectorStoreConsumer[]
+  
 
 }

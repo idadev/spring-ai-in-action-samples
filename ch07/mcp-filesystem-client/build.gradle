@@ -25,9 +25,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.ai:spring-ai-starter-model-openai'
 
-    // tag::mcpDependencies[]
+    
     implementation 'org.springframework.ai:spring-ai-starter-mcp-client'
-    // end::mcpDependencies[]
+    
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

@@ -1,4 +1,4 @@
-# tag::jdbc-compose[]
+
 services:
   postgres:
     image: 'postgres:latest'
@@ -8,7 +8,7 @@ services:
       - 'POSTGRES_USER=myuser'
     ports:
       - '5432:5432'
-# end::jdbc-compose[]
+
   qdrant:
     image: 'qdrant/qdrant:latest'
     ports:

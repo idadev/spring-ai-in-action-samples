@@ -23,7 +23,7 @@ public class AskController {
     this.voiceService = voiceService;
   }
 
-  // tag::newAsk[]
+  
   @PostMapping(path = "/ask", produces = "application/json")
   public Answer ask(
       @AuthenticationPrincipal UserDetails userDetails,
@@ -33,7 +33,7 @@ public class AskController {
     return boardGameService.askQuestion(question,
         userDetails.getUsername() + "_" + conversationId);
   }
-  // end::newAsk[]
+  
 
   @PostMapping(path="/audioAsk", produces = "application/json")
   public Answer audioAsk(
@@ -63,7 +63,7 @@ public class AskController {
     return voiceService.textToSpeech(answer.answer());
   }
 
-  // tag::visionAsk[]
+  
   @PostMapping(path="/visionAsk",
                produces = "application/json",
                consumes = "multipart/form-data")
@@ -82,6 +82,6 @@ public class AskController {
     return boardGameService.askQuestion(
         question, imageResource, imageContentType, userDetails.getUsername() + "_" + conversationId); // <4>
   }
-  // end::visionAsk[]
+  
 
 }

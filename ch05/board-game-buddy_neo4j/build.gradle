@@ -26,9 +26,9 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-model-openai'
     implementation 'org.springframework.ai:spring-ai-starter-vector-store-qdrant'
     implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
-    // tag::neo4j-chat-memory-dependency[]
+    
     implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-repository-neo4j'
-    // end::neo4j-chat-memory-dependency[]
+    
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.testcontainers:junit-jupiter'
