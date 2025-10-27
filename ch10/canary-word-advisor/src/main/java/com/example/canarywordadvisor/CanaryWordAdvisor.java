@@ -30,20 +30,20 @@ public class CanaryWordAdvisor implements CallAdvisor {
     var originalSystemMessage = chatClientRequest.prompt()
         .getSystemMessage().getText();
     var newSystemMessage = String.format("%s (%s)",
-        originalSystemMessage, canaryWord);   // <1>
+        originalSystemMessage, canaryWord);   
 
     var advisedRequest = chatClientRequest.mutate().prompt(
     chatClientRequest.prompt()
         .augmentSystemMessage(newSystemMessage))
-        .build();                            // <2>
+        .build();                            
 
-    var chatClientResponse = chain.nextCall(advisedRequest); // <3>
+    var chatClientResponse = chain.nextCall(advisedRequest); 
 
     if (chatClientResponse.chatResponse()
         .getResult()
         .getOutput()
         .getText()
-        .contains(canaryWord)) {                  // <4>
+        .contains(canaryWord)) {                  
       return createFailureResponse(advisedRequest);
     }
 
@@ -80,7 +80,7 @@ public class CanaryWordAdvisor implements CallAdvisor {
     return 0;
   }
 
-  public static class Builder {   // <5>
+  public static class Builder {   
     private String canaryWordFoundMessage = DEFAULT_CANARY_FOUND_MESSAGE;
 
     public Builder canaryWordFoundMessage(String canaryWordFoundMessage) {

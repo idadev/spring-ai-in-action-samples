@@ -18,12 +18,12 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 @EnableWireMock(
-    @ConfigureWireMock(baseUrlProperties = "openai.base.url")) // <1>
+    @ConfigureWireMock(baseUrlProperties = "openai.base.url")) 
 @SpringBootTest(
-    properties = "spring.ai.openai.base-url=${openai.base.url}") // <2>
+    properties = "spring.ai.openai.base-url=${openai.base.url}") 
 public class SpringAiBoardGameServiceWireMockTests {
 
-  @Value("classpath:/test-openai-response.json")  // <3>
+  @Value("classpath:/test-openai-response.json")  
   Resource responseResource;
 
   @Autowired
@@ -36,7 +36,7 @@ public class SpringAiBoardGameServiceWireMockTests {
     var mapper = new ObjectMapper();
     var responseNode = mapper.readTree(cannedResponse);
     WireMock.stubFor(WireMock.post("/v1/chat/completions")
-        .willReturn(ResponseDefinitionBuilder.okForJson(responseNode))); // <4>
+        .willReturn(ResponseDefinitionBuilder.okForJson(responseNode))); 
   }
 
   @Test
@@ -45,8 +45,8 @@ public class SpringAiBoardGameServiceWireMockTests {
         new SpringAiBoardGameService(chatClientBuilder);
     var answer =
         boardGameService.askQuestion(
-            new Question("What is the capital of France?")); // <5>
+            new Question("What is the capital of France?")); 
     Assertions.assertThat(answer).isNotNull();
-    Assertions.assertThat(answer.answer()).isEqualTo("Paris");   // <6>
+    Assertions.assertThat(answer.answer()).isEqualTo("Paris");   
   }
 }

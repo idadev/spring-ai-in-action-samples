@@ -12,11 +12,11 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableWebSecurity  // <1>
+@EnableWebSecurity  
 public class SecurityConfig {
 
   @Bean
-  SecurityFilterChain securityFilterChain(HttpSecurity http) // <2>
+  SecurityFilterChain securityFilterChain(HttpSecurity http) 
         throws Exception {
     http
         .httpBasic(Customizer.withDefaults())
@@ -29,7 +29,7 @@ public class SecurityConfig {
   }
 
   @Bean
-  UserDetailsService userDetailsService() {  // <3>
+  UserDetailsService userDetailsService() {  
     var user1 = User.builder()
         .username("mickey")
         .password("{noop}password")

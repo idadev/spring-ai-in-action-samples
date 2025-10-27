@@ -16,7 +16,7 @@ public class AskController {
   private final VoiceService voiceService;
 
   public AskController(BoardGameService boardGameService,
-                       VoiceService voiceService) {  // <1>
+                       VoiceService voiceService) {  
     this.boardGameService = boardGameService;
     this.voiceService = voiceService;
   }
@@ -40,12 +40,12 @@ public class AskController {
   }
 
   
-  @PostMapping(path="/audioAsk", produces = "application/json") // <1>
+  @PostMapping(path="/audioAsk", produces = "application/json") 
   public Answer audioAsk(
       @RequestHeader(name="X_AI_CONVERSATION_ID",
           defaultValue = "default") String conversationId,
-      @RequestParam("audio") MultipartFile audioBlob,          // <2>
-      @RequestParam("gameTitle") String gameTitle) {           // <3>
+      @RequestParam("audio") MultipartFile audioBlob,          
+      @RequestParam("gameTitle") String gameTitle) {           
 
     var transcription = voiceService.transcribe(audioBlob.getResource());
     var transcribedQuestion = new Question(gameTitle, transcription);

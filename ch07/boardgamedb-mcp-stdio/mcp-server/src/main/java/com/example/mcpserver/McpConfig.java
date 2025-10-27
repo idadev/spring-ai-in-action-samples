@@ -12,7 +12,7 @@ public class McpConfig {
     ToolCallbackProvider toolCallbackProvider(GameTools tools) {
     return MethodToolCallbackProvider.builder()
         .toolObjects(tools)
-        .build();   // <1>
+        .build();   
   }
 
 }

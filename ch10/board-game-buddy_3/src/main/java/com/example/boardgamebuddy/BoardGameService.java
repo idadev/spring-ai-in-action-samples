@@ -8,5 +8,5 @@ public interface BoardGameService {
     Answer askQuestion(Question question,
                               Resource image,
                               String imageContentType,
-                              String conversationId); // <1>
+                              String conversationId); 
 }

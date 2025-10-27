@@ -25,12 +25,12 @@ public class GameRulesService {
         .filterExpression(
             new FilterExpressionBuilder()
                 .eq("gameTitle", normalizeGameTitle(gameName)).build())
-        .build(); // <1>
+        .build(); 
 
     System.err.println("Search request: " + searchRequest);
 
     var similarDocs =
-        vectorStore.similaritySearch(searchRequest); // <2>
+        vectorStore.similaritySearch(searchRequest); 
 
     if (similarDocs.isEmpty()) {
       return "The rules for " + gameName + " are not available.";
@@ -38,10 +38,10 @@ public class GameRulesService {
 
     return similarDocs.stream()
         .map(Document::getText)
-        .collect(Collectors.joining(System.lineSeparator())); // <3>
+        .collect(Collectors.joining(System.lineSeparator())); 
   }
 
-  private String normalizeGameTitle(String gameTitle) {  // <4>
+  private String normalizeGameTitle(String gameTitle) {  
     return gameTitle.toLowerCase().replace(" ", "_");
   }
 

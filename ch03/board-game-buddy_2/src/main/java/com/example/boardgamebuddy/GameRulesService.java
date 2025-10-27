@@ -18,14 +18,14 @@ public class GameRulesService {
     try {
       var filename = String.format(
           "classpath:/gameRules/%s.txt",
-          gameName.toLowerCase().replace(" ", "_")); // <1>
+          gameName.toLowerCase().replace(" ", "_")); 
 
       return new DefaultResourceLoader()
           .getResource(filename)
-          .getContentAsString(Charset.defaultCharset()); // <2>
+          .getContentAsString(Charset.defaultCharset()); 
     } catch (IOException e) {
       LOG.info("No rules found for game: " + gameName);
-      return "";                                            // <3>
+      return "";                                            
     }
   }
 

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class SpringAiBoardGameService implements BoardGameService {
 
   private static final Logger log =
-      LoggerFactory.getLogger(SpringAiBoardGameService.class); // <1>
+      LoggerFactory.getLogger(SpringAiBoardGameService.class); 
 
   private final ChatClient chatClient;
   private final GameRulesService gameRulesService;
@@ -42,12 +42,12 @@ public class SpringAiBoardGameService implements BoardGameService {
             .param("rules", gameRules))
         .user(question.question())
         .call()
-        .responseEntity(Answer.class); // <2>
+        .responseEntity(Answer.class); 
 
-    var response = responseEntity.response(); // <3>
+    var response = responseEntity.response(); 
 
     var metadata = response.getMetadata();
-    logUsage(metadata.getUsage()); // <4>
+    logUsage(metadata.getUsage()); 
 
     return responseEntity.entity();
   }

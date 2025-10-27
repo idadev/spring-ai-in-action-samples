@@ -48,7 +48,7 @@ public class GameRulesLoaderApplication {
   Function<Flux<Message<byte[]>>, Flux<Document>> documentReader() {
     return resourceFlux -> resourceFlux
         .map(message -> {
-          var fileName = (String) message.getHeaders().get("file_name");   // <1>
+          var fileName = (String) message.getHeaders().get("file_name");   
           LOGGER.info("Reading document from file: {}", fileName);
 
           var fileBytes = message.getPayload();
@@ -57,14 +57,14 @@ public class GameRulesLoaderApplication {
               .get()
               .getFirst();
           if (isPremiumDocument(fileName)) {
-            document.getMetadata().put("documentType", "PREMIUM"); // <2>
+            document.getMetadata().put("documentType", "PREMIUM"); 
           }
           return document;
         })
         .subscribeOn(Schedulers.boundedElastic());
   }
 
-  private boolean isPremiumDocument(String fileName) {    // <3>
+  private boolean isPremiumDocument(String fileName) {    
     var baseFilename = fileName
         .substring(0, fileName.toString().lastIndexOf('.'));
     return baseFilename.endsWith("-premium");
@@ -91,12 +91,12 @@ public class GameRulesLoaderApplication {
     return documentListFlux -> documentListFlux
         .map(documents -> {
           if (!documents.isEmpty()) {
-            var firstDocument = documents.getFirst(); // <1>
+            var firstDocument = documents.getFirst(); 
 
             var gameTitle = chatClient.prompt()
                 .user(userSpec -> userSpec
                     .text(nameOfTheGameTemplateResource)
-                    .param("document", firstDocument.getText())) // <2>
+                    .param("document", firstDocument.getText())) 
                 .call()
                 .entity(GameTitle.class);
 
@@ -109,7 +109,7 @@ public class GameRulesLoaderApplication {
 
             LOGGER.info("Determined game title to be {}", gameTitle.title());
             documents = documents.stream().peek(document -> {
-              document.getMetadata().put("gameTitle", gameTitle.getNormalizedTitle()); // <3>
+              document.getMetadata().put("gameTitle", gameTitle.getNormalizedTitle()); 
             }).toList();
           }
 

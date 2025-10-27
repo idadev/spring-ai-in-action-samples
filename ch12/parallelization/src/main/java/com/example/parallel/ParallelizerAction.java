@@ -14,28 +14,28 @@ public class ParallelizerAction implements Action {
   private final List<Action> workerActions;
 
   public ParallelizerAction(List<Action> workerActions) {
-    this.workerActions = workerActions; // <1>
+    this.workerActions = workerActions; 
   }
   
   @Override
   public String act(String input) {
     LOGGER.info("Starting parallel action...");
     ExecutorService executor = Executors
-        .newFixedThreadPool(workerActions.size());  // <2>
+        .newFixedThreadPool(workerActions.size());  
 
     var futures = workerActions.stream()
         .map(worker -> CompletableFuture.supplyAsync(() -> {
           return worker.act(input);
         }, executor))
-        .toList();   // <3>
+        .toList();   
 
     CompletableFuture<Void> allFutures = CompletableFuture.allOf(
         futures.toArray(CompletableFuture[]::new));
-    allFutures.join();  // <4>
+    allFutures.join();  
 
     return futures.stream()
         .map(CompletableFuture::join)
-        .collect(Collectors.joining("\n-----\n"));  // <5>
+        .collect(Collectors.joining("\n-----\n"));  
   }
 
 }

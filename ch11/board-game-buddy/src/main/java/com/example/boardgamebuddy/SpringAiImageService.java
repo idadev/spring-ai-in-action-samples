@@ -27,7 +27,7 @@ public class SpringAiImageService implements ImageService {
     return generateImage(instructions, "url")
         .getResult()
         .getOutput()
-        .getUrl();     // <1>
+        .getUrl();     
   }
 
   @Override
@@ -35,8 +35,8 @@ public class SpringAiImageService implements ImageService {
     String base64Image = generateImage(instructions, "b64_json")
         .getResult()
         .getOutput()
-        .getB64Json();    // <2>
-    return Base64.getDecoder().decode(base64Image); // <3>
+        .getB64Json();    
+    return Base64.getDecoder().decode(base64Image); 
   }
 
   private ImageResponse generateImage(String instructions, String format) {
@@ -46,11 +46,11 @@ public class SpringAiImageService implements ImageService {
         .width(1024)
         .height(1024)
         .responseFormat(format)
-        .build();  // <4>
+        .build();  
 
     var imagePrompt =
-        new ImagePrompt(instructions, options); // <5>
+        new ImagePrompt(instructions, options); 
 
-    return imageModel.call(imagePrompt); // <6>
+    return imageModel.call(imagePrompt); 
   }
 }

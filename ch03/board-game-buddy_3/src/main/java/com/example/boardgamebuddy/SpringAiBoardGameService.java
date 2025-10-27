@@ -29,11 +29,11 @@ public class SpringAiBoardGameService implements BoardGameService {
     var gameRules = gameRulesService.getRulesFor(question.gameTitle());
 
     var answerText = chatClient.prompt()
-        .system(systemSpec -> systemSpec       // <1>
+        .system(systemSpec -> systemSpec       
             .text(promptTemplate)
             .param("gameTitle", question.gameTitle())
             .param("rules", gameRules))
-        .user(question.question())             // <2>
+        .user(question.question())             
         .call()
         .content();
 

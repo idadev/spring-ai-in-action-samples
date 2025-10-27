@@ -38,12 +38,12 @@ public class SpringAiBoardGameService implements BoardGameService {
     Media questionAudio = Media.builder()
         .data(question.questionAudio())
         .mimeType(MimeTypeUtils.parseMimeType("audio/mp3"))
-        .build();                     // <1>
+        .build();                     
 
     var chatResponse = chatClient.prompt()
         .user(userSpec -> userSpec
             .text("Answer the question from the given audio file.")
-            .media(questionAudio))   // <2>
+            .media(questionAudio))   
         .system(systemSpec -> systemSpec
             .text(promptTemplate)
             .param("gameTitle", question.gameTitle()))
@@ -52,7 +52,7 @@ public class SpringAiBoardGameService implements BoardGameService {
             .param(CONVERSATION_ID, conversationId))
 
         .options(OpenAiChatOptions.builder()
-            .outputModalities(List.of("text", "audio"))   // <3>
+            .outputModalities(List.of("text", "audio"))   
             .outputAudio(
                 new AudioParameters(
                     Voice.ALLOY, AudioResponseFormat.MP3))
@@ -64,7 +64,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .getOutput()
         .getMedia()
         .getFirst()
-        .getDataAsByteArray();      // <4>
+        .getDataAsByteArray();      
     return new AudioAnswer(question.gameTitle(), answerAudio);
   }
   

@@ -17,15 +17,15 @@ public class AiConfig {
   @Bean
   ChatClient chatClient(
       ChatClient.Builder chatClientBuilder, VectorStore vectorStore) {
-    var advisor = RetrievalAugmentationAdvisor.builder()  // <1>
+    var advisor = RetrievalAugmentationAdvisor.builder()  
         .documentRetriever(
-            VectorStoreDocumentRetriever.builder()  // <2>
+            VectorStoreDocumentRetriever.builder()  
               .vectorStore(vectorStore)
               .build())
         .build();
 
     return chatClientBuilder
-        .defaultAdvisors(advisor)  // <3>
+        .defaultAdvisors(advisor)  
         .build();
   }
 

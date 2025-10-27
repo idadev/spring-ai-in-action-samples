@@ -28,7 +28,7 @@ public class SpringAiBoardGameService implements BoardGameService {
   public Answer askQuestion(Question question) {
     var gameNameMatch = String.format(
             "gameTitle == '%s'",
-            normalizeGameTitle(question.gameTitle())); // <1>
+            normalizeGameTitle(question.gameTitle())); 
 
     return chatClient.prompt()
         .system(systemSpec -> systemSpec
@@ -36,7 +36,7 @@ public class SpringAiBoardGameService implements BoardGameService {
             .param("gameTitle", question.gameTitle()))
         .user(question.question())
         .advisors(advisorSpec ->
-            advisorSpec.param(FILTER_EXPRESSION, gameNameMatch)) // <2>
+            advisorSpec.param(FILTER_EXPRESSION, gameNameMatch)) 
         .call()
         .entity(Answer.class);
   }

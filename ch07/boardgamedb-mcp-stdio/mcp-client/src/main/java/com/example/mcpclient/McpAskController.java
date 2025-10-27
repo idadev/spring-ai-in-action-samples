@@ -16,7 +16,7 @@ import java.time.format.DateTimeFormatter;
 @RestController
 public class McpAskController {
 
-//    @Value("classpath:/prompts/systemPrompt.st")  // <1>
+//    @Value("classpath:/prompts/systemPrompt.st")  
 //    private Resource systemPromptTemplate;
 
     private final ChatClient chatClient;
@@ -31,7 +31,7 @@ public class McpAskController {
     @PostMapping("/ask")
     public Answer ask(@RequestBody Question question) {
         return chatClient.prompt()
-//            .system(systemPromptTemplate) // <2>
+//            .system(systemPromptTemplate) 
             .user(question.question())
             .call()
             .entity(Answer.class);

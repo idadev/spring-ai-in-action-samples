@@ -14,7 +14,7 @@ public class GameTools {
 
   private final GameRepository gameRepository;
 
-  public GameTools(GameRepository gameRepository) {  // <1>
+  public GameTools(GameRepository gameRepository) {  
     this.gameRepository = gameRepository;
   }
 
@@ -24,18 +24,18 @@ public class GameTools {
       description = "Returns a game's complexity/difficulty " +
           "given the game's title/name.")
   public GameComplexityResponse getGameComplexity(
-            @ToolParam(description="The title of the game") // <2>
+            @ToolParam(description="The title of the game") 
             String gameTitle) {
-    var gameSlug = gameTitle    // <3>
+    var gameSlug = gameTitle    
         .toLowerCase()
         .replace(" ", "_");
 
     LOGGER.info("Getting complexity for {} ({})",
         gameTitle, gameSlug);
 
-    var gameOpt = gameRepository.findBySlug(gameSlug);  // <4>
+    var gameOpt = gameRepository.findBySlug(gameSlug);  
 
-    var game = gameOpt.orElseGet(() -> {  // <5>
+    var game = gameOpt.orElseGet(() -> {  
       LOGGER.warn("Game not found: {}", gameSlug);
       return new Game(
           null,
@@ -44,7 +44,7 @@ public class GameTools {
           GameComplexity.UNKNOWN.getValue());
     });
 
-    return new GameComplexityResponse(  // <6>
+    return new GameComplexityResponse(  
         game.title(), game.complexityEnum());
   }
 

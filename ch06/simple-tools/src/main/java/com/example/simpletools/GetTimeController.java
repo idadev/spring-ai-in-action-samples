@@ -14,9 +14,9 @@ public class GetTimeController {
   private final ChatClient chatClient;
 
   public GetTimeController(ChatClient.Builder chatClientBuilder,
-                           TimeTools timeTools) {  // <1>
+                           TimeTools timeTools) {  
     this.chatClient = chatClientBuilder
-        .defaultTools(timeTools)  // <2>
+        .defaultTools(timeTools)  
         .build();
   }
 

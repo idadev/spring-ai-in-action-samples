@@ -9,13 +9,13 @@ public class AskController {
 
   private final BoardGameService boardGameService;
 
-  public AskController(BoardGameService boardGameService) { // <1>
+  public AskController(BoardGameService boardGameService) { 
     this.boardGameService = boardGameService;
   }
 
   @PostMapping(path="/ask", produces="application/json")
   public Answer ask(@RequestBody Question question) {
-      return boardGameService.askQuestion(question); // <2>
+      return boardGameService.askQuestion(question); 
   }
 
 }

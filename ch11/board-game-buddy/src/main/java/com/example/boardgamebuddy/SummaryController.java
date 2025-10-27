@@ -11,18 +11,18 @@ public class SummaryController {
 
   private final BoardGameService boardGameService;
 
-  public SummaryController(BoardGameService boardGameService) { // <1>
+  public SummaryController(BoardGameService boardGameService) { 
     this.boardGameService = boardGameService;
   }
 
   @PostMapping("/summarize")
   public Answer summarize(
-      @RequestPart("rulesDocument") MultipartFile rulesDocument) { // <2>
+      @RequestPart("rulesDocument") MultipartFile rulesDocument) { 
 
     var reader = new TikaDocumentReader(rulesDocument.getResource());
-    var rulesText = reader.get().getFirst().getText();     // <3>
+    var rulesText = reader.get().getFirst().getText();     
 
-    return boardGameService.summarizeRules(rulesText);  // <4>
+    return boardGameService.summarizeRules(rulesText);  
   }
 
 }

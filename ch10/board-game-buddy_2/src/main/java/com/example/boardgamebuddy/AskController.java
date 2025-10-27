@@ -71,16 +71,16 @@ public class AskController {
       @AuthenticationPrincipal UserDetails userDetails,
       @RequestHeader(name="X_AI_CONVERSATION_ID",
           defaultValue = "default") String conversationId,
-      @RequestPart("image") MultipartFile image, // <1>
+      @RequestPart("image") MultipartFile image, 
       @RequestPart("gameTitle") String game,
       @RequestPart("question") String questionIn) {
 
-    var imageResource = image.getResource();    // <2>
-    var imageContentType = image.getContentType(); // <3>
+    var imageResource = image.getResource();    
+    var imageContentType = image.getContentType(); 
 
     var question = new Question(game, questionIn);
     return boardGameService.askQuestion(
-        question, imageResource, imageContentType, userDetails.getUsername() + "_" + conversationId); // <4>
+        question, imageResource, imageContentType, userDetails.getUsername() + "_" + conversationId); 
   }
   
 

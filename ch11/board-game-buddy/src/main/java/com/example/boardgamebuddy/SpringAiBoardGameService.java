@@ -38,7 +38,7 @@ public class SpringAiBoardGameService implements BoardGameService {
 
   
   @Value("classpath:/promptTemplates/summarizeSystemPrompt.st")
-  Resource summaryPromptTemplate;   // <1>
+  Resource summaryPromptTemplate;   
   
 
   /*
@@ -99,7 +99,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .user(userSpec -> userSpec
             .text("Summarize these rules: {gameRules}")
             .param("gameRules", text))
-        .call()  // <2>
+        .call()  
         .entity(Answer.class);
   }
   

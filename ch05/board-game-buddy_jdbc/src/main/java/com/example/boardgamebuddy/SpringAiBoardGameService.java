@@ -51,7 +51,7 @@ public class SpringAiBoardGameService implements BoardGameService {
         .user(question.question())
         .advisors(advisorSpec -> advisorSpec
             .param(FILTER_EXPRESSION, gameNameMatch)
-            .param(CONVERSATION_ID, conversationId)) // <1>
+            .param(CONVERSATION_ID, conversationId)) 
         .call()
         .entity(Answer.class);
   }

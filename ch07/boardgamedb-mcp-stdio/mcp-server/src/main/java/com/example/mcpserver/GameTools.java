@@ -11,7 +11,7 @@ public class GameTools {
 
   private final GameRepository gameRepository;
 
-  public GameTools(GameRepository gameRepository) { // <1>
+  public GameTools(GameRepository gameRepository) { 
     this.gameRepository = gameRepository;
   }
 
@@ -24,14 +24,14 @@ public class GameTools {
         description = "Finds a games suitable for the specified number of players.")
   public List<Game> findGamesForPlayerCount(
       @ToolParam(description = "The number of players to find games for.") int numPlayers) {
-    return gameRepository.findGamesForPlayerCount(numPlayers);  // <2>
+    return gameRepository.findGamesForPlayerCount(numPlayers);  
   }
 
   @Tool(name = "findGamesForPlayingTime",
         description = "Finds games suitable for the specified playing time.")
   public List<Game> findGamesForPlayingTime(
       @ToolParam(description = "The time for playing the game.") int time) {
-    return gameRepository.findGamesForPlayingTime(time);   // <2>
+    return gameRepository.findGamesForPlayingTime(time);   
   }
 
 }

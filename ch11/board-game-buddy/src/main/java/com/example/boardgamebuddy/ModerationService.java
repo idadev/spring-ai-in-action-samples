@@ -9,24 +9,24 @@ public class ModerationService {
 
   private final ModerationModel moderationModel;
 
-  public ModerationService(ModerationModel moderationModel) { // <1>
+  public ModerationService(ModerationModel moderationModel) { 
     this.moderationModel = moderationModel;
   }
 
   public void moderate(String text) {
     var moderationResponse =
-        moderationModel.call(new ModerationPrompt(text)); // <2>
+        moderationModel.call(new ModerationPrompt(text)); 
 
     var moderationResult = moderationResponse.getResult()
         .getOutput().getResults().getFirst();
-    var categories = moderationResult.getCategories();    // <3>
+    var categories = moderationResult.getCategories();    
 
-    if (categories.isHate() || categories.isHateThreatening()) // <4>
+    if (categories.isHate() || categories.isHateThreatening()) 
       throw new ModerationException("Hate");
     else if (categories.isHarassment() ||
-             categories.isHarassmentThreatening())      // <4>
+             categories.isHarassmentThreatening())      
       throw new ModerationException("Harassment");
-    else if (categories.isViolence())                   // <4>
+    else if (categories.isViolence())                   
       throw new ModerationException("Violence");
   }
 

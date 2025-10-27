@@ -20,13 +20,13 @@ public class GameComplexityFunction
 
   private final GameRepository gameRepository;
 
-  GameComplexityFunction(GameRepository gameRepository) { // <1>
+  GameComplexityFunction(GameRepository gameRepository) { 
     this.gameRepository = gameRepository;
   }
 
   @Override
   @PreAuthorize("hasRole('ROLE_USER')")
-  public GameComplexityResponse apply(GameComplexityRequest gameDataRequest) { // <2>
+  public GameComplexityResponse apply(GameComplexityRequest gameDataRequest) { 
 
     var gameSlug = gameDataRequest.title()
         .toLowerCase()

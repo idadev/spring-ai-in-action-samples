@@ -32,11 +32,11 @@ public class SelfEvaluatingBoardGameService implements BoardGameService {
         .defaultOptions(chatOptions)
         .build();
 
-    this.evaluator = new RelevancyEvaluator(chatClientBuilder); // <1>
+    this.evaluator = new RelevancyEvaluator(chatClientBuilder); 
   }
 
   @Override
-  @Retryable(retryFor = AnswerNotRelevantException.class)  // <2>
+  @Retryable(retryFor = AnswerNotRelevantException.class)  
   public Answer askQuestion(Question question) {
     var answerText = chatClient.prompt()
         .user(question.question())
@@ -48,7 +48,7 @@ public class SelfEvaluatingBoardGameService implements BoardGameService {
     return new Answer(answerText);
   }
 
-  @Recover // <3>
+  @Recover 
   public Answer recover(AnswerNotRelevantException e) {
     return new Answer("I'm sorry, I wasn't able to answer the question.");
   }
@@ -58,7 +58,7 @@ public class SelfEvaluatingBoardGameService implements BoardGameService {
         new EvaluationRequest(question.question(), answerText);
     var evaluationResponse = evaluator.evaluate(evaluationRequest);
     if (!evaluationResponse.isPass()) {
-      throw new AnswerNotRelevantException(question.question(), answerText); // <4>
+      throw new AnswerNotRelevantException(question.question(), answerText); 
     }
   }
 

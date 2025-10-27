@@ -28,7 +28,7 @@ dependencies {
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}" // <2>
+        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}" 
     }
 }
 

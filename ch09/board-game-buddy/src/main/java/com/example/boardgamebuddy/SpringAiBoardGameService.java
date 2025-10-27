@@ -43,20 +43,20 @@ public class SpringAiBoardGameService implements BoardGameService {
   
   @Override
   public Answer askQuestion(Question question,
-                            Resource image,            // <1>
-                            String imageContentType,   // <1>
+                            Resource image,            
+                            String imageContentType,   
                             String conversationId) {
     var gameNameMatch = String.format(
         "gameTitle == '%s'",
         normalizeGameTitle(question.gameTitle()));
 
     var mediaType =
-        MimeTypeUtils.parseMimeType(imageContentType); // <2>
+        MimeTypeUtils.parseMimeType(imageContentType); 
 
     return chatClient.prompt()
         .user(userSpec -> userSpec
             .text(question.question())
-            .media(mediaType, image)) // <3>
+            .media(mediaType, image)) 
         .system(systemSpec -> systemSpec
             .text(promptTemplate)
             .param("gameTitle", question.gameTitle()))

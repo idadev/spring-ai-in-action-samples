@@ -9,9 +9,9 @@ import java.util.Optional;
 import java.util.function.Function;
 
 @Component
-@Description("Fetches the complexity of a game.")      // <1>
+@Description("Fetches the complexity of a game.")      
 public class GameTools
-    implements Function<GameComplexityRequest, GameComplexityResponse> { // <2>
+    implements Function<GameComplexityRequest, GameComplexityResponse> { 
 
   public static final Logger LOGGER =
       LoggerFactory.getLogger(GameTools.class);
@@ -23,7 +23,7 @@ public class GameTools
   }
 
   @Override
-  public GameComplexityResponse apply(    // <3>
+  public GameComplexityResponse apply(    
       GameComplexityRequest gameDataRequest) {
     String gameSlug = gameDataRequest.title()
         .toLowerCase()

@@ -12,9 +12,9 @@ public class McpAskController {
     private final ChatClient chatClient;
 
     public McpAskController(ChatClient.Builder chatClientBuilder,
-                            ToolCallbackProvider tools) { // <1>
+                            ToolCallbackProvider tools) { 
         this.chatClient = chatClientBuilder
-                .defaultToolCallbacks(tools)  // <2>
+                .defaultToolCallbacks(tools)  
                 .build();
     }
 

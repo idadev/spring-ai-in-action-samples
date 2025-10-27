@@ -18,10 +18,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class SpringAiBoardGameServiceTests {
 
   @Autowired
-  private BoardGameService boardGameService;  // <1>
+  private BoardGameService boardGameService;  
 
   @Autowired
-  private ChatClient.Builder chatClientBuilder; // <2>
+  private ChatClient.Builder chatClientBuilder; 
 
   private RelevancyEvaluator relevancyEvaluator;
 
@@ -44,15 +44,15 @@ public class SpringAiBoardGameServiceTests {
   public void evaluateRelevancy() {
     String userText = "Why is the sky blue?";
     Question question = new Question(userText);
-    Answer answer = boardGameService.askQuestion(question); // <3>
+    Answer answer = boardGameService.askQuestion(question); 
 
     EvaluationRequest evaluationRequest = new EvaluationRequest(
         userText, answer.answer());
 
     EvaluationResponse response = relevancyEvaluator
-        .evaluate(evaluationRequest); // <4>
+        .evaluate(evaluationRequest); 
 
-    Assertions.assertThat(response.isPass())   // <5>
+    Assertions.assertThat(response.isPass())   
         .withFailMessage("""
           ========================================
           The answer "%s"

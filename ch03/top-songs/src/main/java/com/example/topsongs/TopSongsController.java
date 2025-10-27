@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TopSongsController {
 
   @Value("classpath:/top-songs-prompt.st")
-  Resource topSongPromptTemplate; // <1>
+  Resource topSongPromptTemplate; 
 
   private final ChatClient chatClient;
 
@@ -29,7 +29,7 @@ public class TopSongsController {
             .text(topSongPromptTemplate)
             .param("year", year))
         .call()
-        .entity(new ParameterizedTypeReference<List<String>>() {}); // <2>
+        .entity(new ParameterizedTypeReference<List<String>>() {}); 
   }
 
 }

@@ -22,7 +22,7 @@ public class OpenAiVoiceService implements VoiceService {
   
   public OpenAiVoiceService(
       OpenAiAudioTranscriptionModel transcriptionModel) {
-    this.transcriptionModel = transcriptionModel; // <1>
+    this.transcriptionModel = transcriptionModel; 
   }
   
   */
@@ -48,7 +48,7 @@ public class OpenAiVoiceService implements VoiceService {
 
   @Override
   public String transcribe(Resource audioFileResource) {
-    return transcriptionModel.call(audioFileResource); // <2>
+    return transcriptionModel.call(audioFileResource); 
   }
 
   

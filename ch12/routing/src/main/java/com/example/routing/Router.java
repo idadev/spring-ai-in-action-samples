@@ -19,7 +19,7 @@ public class Router implements Action {
   private final ChatClient chatClient;
 
   public Router(ChatClient.Builder chatClientBuilder,
-                Map<String, Chain> chains, // <1>
+                Map<String, Chain> chains, 
                 @Value("classpath:/promptTemplates/router.st")
                 Resource systemMessageTemplate) {
     this.chains = chains;
@@ -34,10 +34,10 @@ public class Router implements Action {
             .text("Choose a handler for the following input: {userInput}")
             .param("userInput", input))
         .call()
-        .entity(Handler.class); // <2>
+        .entity(Handler.class); 
 
     LOGGER.info("Routing to {} for input: {}", handler.handlerName(), input);
-    return chains.get(handler.handlerName()).act(input); // <3>
+    return chains.get(handler.handlerName()).act(input); 
   }
 
   private record Handler(String handlerName) {}

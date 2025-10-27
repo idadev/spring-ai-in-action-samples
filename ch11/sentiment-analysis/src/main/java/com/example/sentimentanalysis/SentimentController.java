@@ -14,7 +14,7 @@ public class SentimentController {
 
   public SentimentController(
       ChatClient.Builder chatClientBuilder,
-      @Value("classpath:/sentimentSystemPrompt.st")   // <1>
+      @Value("classpath:/sentimentSystemPrompt.st")   
       Resource sentimentSystemPrompt) {
 
     this.chatClient = chatClientBuilder
@@ -27,7 +27,7 @@ public class SentimentController {
     return chatClient.prompt()
         .user(userSpec -> userSpec
             .text("User text: {text}")
-            .param("text", textInput.text()))       // <2>
+            .param("text", textInput.text()))       
         .call()
         .entity(SentimentAnalysis.class);
   }

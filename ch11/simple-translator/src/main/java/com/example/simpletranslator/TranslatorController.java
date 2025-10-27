@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class TranslatorController {
 
   @Value("classpath:/translationPromptTemplate.st")
-  private Resource userPromptMessage;       // <1>
+  private Resource userPromptMessage;       
 
   private final ChatClient chatClient;
 
   public TranslatorController(
       ChatClient.Builder chatClientBuilder) {
-    this.chatClient = chatClientBuilder.build();  // <2>
+    this.chatClient = chatClientBuilder.build();  
   }
 
   @PostMapping("/translate")
@@ -27,7 +27,7 @@ public class TranslatorController {
             .text(userPromptMessage)
             .param("sourceLanguage", request.sourceLanguage())
             .param("targetLanguage", request.targetLanguage())
-            .param("sourceText", request.text()))  // <3>
+            .param("sourceText", request.text()))  
         .call()
         .entity(Translation.class);
   }

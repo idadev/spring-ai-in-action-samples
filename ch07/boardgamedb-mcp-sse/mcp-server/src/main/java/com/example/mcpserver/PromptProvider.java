@@ -12,13 +12,13 @@ public class PromptProvider {
 
   @McpPrompt(
       name = "gamesForPlayerCount",
-      description = "A prompt to find games for a specific number of players") // <1>
+      description = "A prompt to find games for a specific number of players") 
   public McpSchema.GetPromptResult gamesForPlayerCount(
       @McpArg(name = "playerCount",
               description = "The number of players",
-              required = true) Integer playerCount) {  // <2>
+              required = true) Integer playerCount) {  
 
-    var userMessage = new McpSchema.PromptMessage(  // <3>
+    var userMessage = new McpSchema.PromptMessage(  
         McpSchema.Role.USER,
         new McpSchema.TextContent(
             String.format("Find games for %s players", playerCount)
@@ -26,18 +26,18 @@ public class PromptProvider {
 
     return new McpSchema.GetPromptResult(
         String.format("A prompt to find games for %s players", playerCount),
-        List.of(userMessage));  // <4>
+        List.of(userMessage));  
   }
 
   @McpPrompt(
       name = "gamesForPlayingTime",
-      description = "A prompt to find games for a specific number of players") // <1>
+      description = "A prompt to find games for a specific number of players") 
   public McpSchema.GetPromptResult gamesForPlayingTime(
       @McpArg(name = "timeInMinutes",
           description = "The time in minutes",
-          required = true) Integer timeInMinutes) {  // <2>
+          required = true) Integer timeInMinutes) {  
 
-    var userMessage = new McpSchema.PromptMessage( // <3>
+    var userMessage = new McpSchema.PromptMessage( 
         McpSchema.Role.USER,
         new McpSchema.TextContent(
             String.format("Find games to play in %s minutes", timeInMinutes)
@@ -45,6 +45,6 @@ public class PromptProvider {
 
     return new McpSchema.GetPromptResult(
         String.format("A prompt to find games to play in %s minutes", timeInMinutes),
-        List.of(userMessage));  // <4>
+        List.of(userMessage));  
   }
 }

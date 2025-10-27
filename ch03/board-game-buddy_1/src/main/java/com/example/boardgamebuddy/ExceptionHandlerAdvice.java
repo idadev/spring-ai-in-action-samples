@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.List;
 
-@RestControllerAdvice     // <1>
+@RestControllerAdvice     
 public class ExceptionHandlerAdvice {
 
-  @ExceptionHandler(MethodArgumentNotValidException.class)  // <2>
+  @ExceptionHandler(MethodArgumentNotValidException.class)  
   public ProblemDetail handleValidationExceptions(
                               MethodArgumentNotValidException ex) {
     var problemDetail =  ProblemDetail
@@ -23,7 +23,7 @@ public class ExceptionHandlerAdvice {
         .map(MessageSourceResolvable::getDefaultMessage)
         .toList();
 
-    problemDetail.setProperty("validationErrors", validationMessages); // <3>
+    problemDetail.setProperty("validationErrors", validationMessages); 
     return problemDetail;
   }
 

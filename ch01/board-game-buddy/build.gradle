@@ -19,7 +19,7 @@ repositories {
 }
 
 ext {
-    set('springAiVersion', "1.0.3")  // <1>
+    set('springAiVersion', "1.0.3")  
 }
 
 dependencies {
@@ -37,7 +37,7 @@ dependencies {
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}" // <2>
+        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}" 
     }
 }
 

@@ -16,7 +16,7 @@ public class AiConfig {
   ChatClient chatClient(ChatClient.Builder chatClientBuilder, VectorStore vectorStore) {
     return chatClientBuilder
         .defaultAdvisors(
-            VectorStoreChatMemoryAdvisor.builder(vectorStore).build(),    // <1>
+            VectorStoreChatMemoryAdvisor.builder(vectorStore).build(),    
             QuestionAnswerAdvisor.builder(vectorStore)
                 .searchRequest(SearchRequest.builder().build()).build())
         .build();

@@ -15,7 +15,7 @@ public class TimeTools {
       LoggerFactory.getLogger(TimeTools.class);
 
   @Tool(name = "getCurrentTime",
-        description = "Get the current time in the specified time zone.")  // <1>
+        description = "Get the current time in the specified time zone.")  
   public String getCurrentTime(String timeZone) {
     LOGGER.info("Getting the current time in {}", timeZone);
     var now = LocalDateTime.now(ZoneId.of(timeZone));

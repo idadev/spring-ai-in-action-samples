@@ -11,7 +11,7 @@ public class BurgerBattleArtController {
   private final ImageService imageService;
 
   public BurgerBattleArtController(BoardGameService boardGameService,
-                                   ImageService imageService) {  // <1>
+                                   ImageService imageService) {  
     this.boardGameService = boardGameService;
     this.imageService = imageService;
   }
@@ -19,13 +19,13 @@ public class BurgerBattleArtController {
   @GetMapping(path="/burgerBattleArt")
   public String burgerBattleArt(@RequestParam("burger") String burger) {
     var instructions = getImageInstructions(burger);
-    return imageService.generateImageForUrl(instructions); // <2>
+    return imageService.generateImageForUrl(instructions); 
   }
 
   @GetMapping(path="/burgerBattleArt", produces = "image/png")
     public byte[] burgerBattleArtImage(@RequestParam("burger") String burger) {
     var instructions = getImageInstructions(burger);
-    return imageService.generateImageForImageBytes(instructions); // <3>
+    return imageService.generateImageForImageBytes(instructions); 
   }
 
   private String getImageInstructions(String burger) {
@@ -33,11 +33,11 @@ public class BurgerBattleArtController {
         "Burger Battle",
         "What ingredients are on the " + burger + " burger?");
     var answer = boardGameService.askQuestion(
-        question, "art_conversation");        // <4>
+        question, "art_conversation");        
 
     return "A burger called " + burger + " " +
         "with the following ingredients: " + answer.answer() + ". " +
-        "Style the background to match the name of the burger."; // <5>
+        "Style the background to match the name of the burger."; 
   }
 
 }

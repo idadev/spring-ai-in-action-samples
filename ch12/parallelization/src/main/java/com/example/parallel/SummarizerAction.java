@@ -21,7 +21,7 @@ public class SummarizerAction implements Action {
       Resource systemMessageTemplate) {
     this.chatClient = chatClientBuilder
         .defaultSystem(systemMessageTemplate)
-        .build();              // <1>
+        .build();              
   }
 
   @Override
@@ -32,7 +32,7 @@ public class SummarizerAction implements Action {
             .text("Summarize the following text:\n\n{input}")
             .param("input", input))
         .call()
-        .content();              // <2>
+        .content();              
   }
 
 }

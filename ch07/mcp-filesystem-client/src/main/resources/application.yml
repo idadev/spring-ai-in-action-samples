@@ -14,13 +14,12 @@ spring:
         stdio:
 
           connections:
-            filesystem:  # <1>
-              command: 'npx' # <2>
-              args: # <3>
+            filesystem:
+              command: 'npx'
+              args:
                 - '-y'
                 - '@modelcontextprotocol/server-filesystem'
                 - '/Users/habuma/mcp-playground'
 
         toolcallback:
           enabled: true
-

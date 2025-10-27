@@ -5,13 +5,13 @@ import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@RestControllerAdvice     // <1>
+@RestControllerAdvice     
 public class ModerationExceptionHandler {
 
-  @ExceptionHandler(ModerationException.class)   // <2>
+  @ExceptionHandler(ModerationException.class)   
   public ProblemDetail moderationException(ModerationException ex) {
     var problemDetail = ProblemDetail
-        .forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage()); // <3>
+        .forStatusAndDetail(HttpStatus.BAD_REQUEST, ex.getMessage()); 
     problemDetail.setTitle("Moderation Exception");
     return problemDetail;
   }

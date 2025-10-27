@@ -21,7 +21,7 @@ import java.util.Map;
     name = "GameInfoAgent",
     description = "An agent that helps users answer questions " +
         "about board games, including mechanics and player counts.",
-    version = "1.0.0")  // <1>
+    version = "1.0.0")  
 public class GameInfoAgent {
 
   private static final Logger LOGGER =
@@ -33,25 +33,25 @@ public class GameInfoAgent {
   // Prompt template resources
   //
   
-  @Value("classpath:/promptTemplates/determineTitle.st")  // <1>
+  @Value("classpath:/promptTemplates/determineTitle.st")  
   Resource determineTitlePromptTemplate;
 
   
 
   
-  @Value("classpath:/promptTemplates/rulesFetcher.st")  // <1>
+  @Value("classpath:/promptTemplates/rulesFetcher.st")  
   Resource rulesFetcherPromptTemplate;
 
   
 
   
-  @Value("classpath:/promptTemplates/playerCount.st")  // <1>
+  @Value("classpath:/promptTemplates/playerCount.st")  
   Resource playerCountPromptTemplate;
 
   
 
   
-  @Value("classpath:/promptTemplates/mechanicsDeterminer.st")  // <1>
+  @Value("classpath:/promptTemplates/mechanicsDeterminer.st")  
   Resource mechanicsDeterminerPromptTemplate;
 
   
@@ -61,7 +61,7 @@ public class GameInfoAgent {
 
   public GameInfoAgent(
       @Value("${boardgame.rules.path}") String rulesFilePath) {
-    this.rulesFilePath = rulesFilePath;  // <2>
+    this.rulesFilePath = rulesFilePath;  
   }
 
   // ...action methods go here...
@@ -75,11 +75,11 @@ public class GameInfoAgent {
   public GameTitle extractGameTitle(UserInput userInput) {
     LOGGER.info("Extracting game title from user input");
 
-    var prompt = promptResourceToString(determineTitlePromptTemplate, // <2>
+    var prompt = promptResourceToString(determineTitlePromptTemplate, 
         Map.of("userInput", userInput.getContent()));
 
     return PromptRunner.usingLlm()
-        .createObject(prompt, GameTitle.class); // <3>
+        .createObject(prompt, GameTitle.class); 
   }
   
 
@@ -88,11 +88,11 @@ public class GameInfoAgent {
   public RulesFile getGameRulesFilename(GameTitle gameTitle) {
     LOGGER.info("Getting game rules filename for: " + gameTitle.gameTitle());
 
-    var prompt = promptResourceToString(rulesFetcherPromptTemplate,  // <2>
+    var prompt = promptResourceToString(rulesFetcherPromptTemplate,  
         Map.of("gameTitle", gameTitle.gameTitle()));
 
     return PromptRunner.usingLlm()
-        .createObject(prompt, RulesFile.class);  // <3>
+        .createObject(prompt, RulesFile.class);  
   }
   
 
@@ -108,44 +108,44 @@ public class GameInfoAgent {
               rulesFilePath + "/" + rulesFile.filename())
           .get()
           .getFirst()
-          .getText();             // <1>
+          .getText();             
       if (rulesContent != null) {
-        return new GameRules(gameTitle.gameTitle(), rulesContent); // <2>
+        return new GameRules(gameTitle.gameTitle(), rulesContent); 
       }
     }
 
     throw new ActionFailedException(
-        "Unable to fetch rules for the specified game.");  // <3>
+        "Unable to fetch rules for the specified game.");  
   }
   
 
   
   @Action
-  @AchievesGoal(description = "Player count has been determined.") // <2>
+  @AchievesGoal(description = "Player count has been determined.") 
   public PlayerCount determinePlayerCount(GameRules gameRules) {
     LOGGER.info("Determining player count from rules for: {}",
                 gameRules.gameTitle());
 
-    var prompt = promptResourceToString(playerCountPromptTemplate,  // <3>
+    var prompt = promptResourceToString(playerCountPromptTemplate,  
         Map.of("gameRules", gameRules.rulesText()));
 
     return PromptRunner.usingLlm()
-        .createObject(prompt, PlayerCount.class);  // <4>
+        .createObject(prompt, PlayerCount.class);  
   }
   
 
   
   @Action
-  @AchievesGoal(description = "Game mechanics have been determined.")  // <2>
+  @AchievesGoal(description = "Game mechanics have been determined.")  
   public GameMechanics determineGameMechanics(GameRules gameRules) {
     LOGGER.info("Determining mechanics from rules for: {}",
                 gameRules.gameTitle());
 
-    var prompt = promptResourceToString(mechanicsDeterminerPromptTemplate, // <3>
+    var prompt = promptResourceToString(mechanicsDeterminerPromptTemplate, 
         Map.of("gameRules", gameRules.rulesText()));
 
     return PromptRunner.usingLlm()
-        .createObject(prompt, GameMechanics.class); // <4>
+        .createObject(prompt, GameMechanics.class); 
   }
   
 

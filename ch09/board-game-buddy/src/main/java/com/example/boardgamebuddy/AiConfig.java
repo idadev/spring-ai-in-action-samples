@@ -37,12 +37,12 @@ public class AiConfig {
     return gameDataRequest -> {
       var gameSlug = gameDataRequest.title()
           .toLowerCase()
-          .replace(" ", "_"); // <1>
+          .replace(" ", "_"); 
 
       LOGGER.info("Getting complexity for {} ({})",
           gameDataRequest.title(), gameSlug);
 
-      var gameOpt = gameRepository.findBySlug(gameSlug); // <2>
+      var gameOpt = gameRepository.findBySlug(gameSlug); 
 
       var game = gameOpt.orElseGet(() -> {
         LOGGER.warn("Game not found: {}", gameSlug);
@@ -51,10 +51,10 @@ public class AiConfig {
             gameSlug,
             gameDataRequest.title(),
             GameComplexity.UNKNOWN.getValue());
-      }); // <3>
+      }); 
 
       return new GameComplexityResponse(
-          game.title(), game.complexityEnum());   // <4>
+          game.title(), game.complexityEnum());   
     };
 
   }

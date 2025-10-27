@@ -21,7 +21,7 @@ public class AiConfig {
           ChatMemory chatMemory) {
     return chatClientBuilder
         .defaultAdvisors(
-            MessageChatMemoryAdvisor.builder(chatMemory).build(),  // <1>
+            MessageChatMemoryAdvisor.builder(chatMemory).build(),  
             QuestionAnswerAdvisor.builder(vectorStore)
                 .searchRequest(SearchRequest.builder().build()).build())
           .build();

@@ -23,16 +23,16 @@ public class McpConfig {
 //  @Bean
 
   public List<McpServerFeatures.SyncPromptSpecification> gamePrompts() {
-    var playerCountPrompt = new McpSchema.Prompt(  // <1>
+    var playerCountPrompt = new McpSchema.Prompt(  
         "gamesForPlayerCount",
         "A prompt to find games for a specific number of players",
         List.of(new McpSchema.PromptArgument(
             "playerCount", "The number of players", true)));
 
-    var playerCountPromptSpec = new McpServerFeatures.SyncPromptSpecification( // <2>
+    var playerCountPromptSpec = new McpServerFeatures.SyncPromptSpecification( 
         playerCountPrompt, (exchange, getPromptRequest) -> {
       String playerCount =
-          (String) getPromptRequest.arguments().get("playerCount"); // <3>
+          (String) getPromptRequest.arguments().get("playerCount"); 
       var userMessage = new McpSchema.PromptMessage(
           McpSchema.Role.USER,
           new McpSchema.TextContent(
@@ -43,16 +43,16 @@ public class McpConfig {
           List.of(userMessage));
     });
 
-    var playingTimePrompt = new McpSchema.Prompt(  // <1>
+    var playingTimePrompt = new McpSchema.Prompt(  
         "gamesForPlayingTime",
         "A prompt to find games for given amount of time",
         List.of(new McpSchema.PromptArgument(
             "timeInMinutes", "The time in minutes", true)));
 
-    var playingTimePromptSpec = new McpServerFeatures.SyncPromptSpecification( // <2>
+    var playingTimePromptSpec = new McpServerFeatures.SyncPromptSpecification( 
         playingTimePrompt, (exchange, getPromptRequest) -> {
       String timeInMinutes =
-          (String) getPromptRequest.arguments().get("timeInMinutes"); // <3>
+          (String) getPromptRequest.arguments().get("timeInMinutes"); 
       var userMessage = new McpSchema.PromptMessage(
           McpSchema.Role.USER,
           new McpSchema.TextContent(
@@ -64,7 +64,7 @@ public class McpConfig {
           List.of(userMessage));
     });
 
-    return List.of(playerCountPromptSpec, playingTimePromptSpec); // <4>
+    return List.of(playerCountPromptSpec, playingTimePromptSpec); 
   }
   
 
@@ -77,7 +77,7 @@ public class McpConfig {
     McpSchema.Annotations annotations =
         new McpSchema.Annotations(audience, 1.0);
 
-    var gameListResource = new McpSchema.Resource(   // <1>
+    var gameListResource = new McpSchema.Resource(   
         "games://game-list",
         "Game List",
         "A list of games available in the repository",
@@ -85,13 +85,13 @@ public class McpConfig {
         annotations
     );
 
-    var gameTitles = gameRepository.findAllTitles(); // <2>
+    var gameTitles = gameRepository.findAllTitles(); 
     var gameListText = new StringBuilder();
     for (String title : gameTitles) {
       gameListText.append("- ").append(title).append("\n");
     }
 
-    var gameListResourceSpec = new McpServerFeatures.SyncResourceSpecification( // <3>
+    var gameListResourceSpec = new McpServerFeatures.SyncResourceSpecification( 
         gameListResource, (exchange, request) -> {
       return new McpSchema.ReadResourceResult(
           List.of(new McpSchema.TextResourceContents(
@@ -100,7 +100,7 @@ public class McpConfig {
               gameListText.toString())));
     });
 
-    return List.of(gameListResourceSpec);  // <4>
+    return List.of(gameListResourceSpec);  
   }
   
 

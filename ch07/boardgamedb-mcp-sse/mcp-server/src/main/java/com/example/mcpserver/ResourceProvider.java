@@ -11,7 +11,7 @@ public class ResourceProvider {
 
   private final GameRepository gameRepository;
 
-  public ResourceProvider(GameRepository gameRepository) {  // <1>
+  public ResourceProvider(GameRepository gameRepository) {  
     this.gameRepository = gameRepository;
   }
 
@@ -19,13 +19,13 @@ public class ResourceProvider {
                name = "Game List",
                description = "A list of games available in the repository")
   public McpSchema.ReadResourceResult gameListResource(McpSchema.ReadResourceRequest request) {
-    var gameTitles = gameRepository.findAllTitles();     // <2>
+    var gameTitles = gameRepository.findAllTitles();     
     var gameListText = new StringBuilder();
     for (String title : gameTitles) {
       gameListText.append("- ").append(title).append("\n");
     }
 
-    return new McpSchema.ReadResourceResult(    // <3>
+    return new McpSchema.ReadResourceResult(    
         List.of(new McpSchema.TextResourceContents(
             request.uri(),
             "text/plain",

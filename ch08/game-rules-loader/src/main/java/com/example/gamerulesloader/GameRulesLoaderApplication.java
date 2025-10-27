@@ -70,12 +70,12 @@ public class GameRulesLoaderApplication {
     return documentListFlux -> documentListFlux
         .map(documents -> {
           if (!documents.isEmpty()) {
-            Document firstDocument = documents.getFirst(); // <1>
+            Document firstDocument = documents.getFirst(); 
 
             GameTitle gameTitle = chatClient.prompt()
                 .user(userSpec -> userSpec
                     .text(nameOfTheGameTemplateResource)
-                    .param("document", firstDocument.getText())) // <2>
+                    .param("document", firstDocument.getText())) 
                 .call()
                 .entity(GameTitle.class);
 
@@ -87,7 +87,7 @@ public class GameRulesLoaderApplication {
             }
             LOGGER.info("Determined game title to be {}", gameTitle.title());
             documents = documents.stream().peek(document -> {
-              document.getMetadata().put("gameTitle", gameTitle.getNormalizedTitle()); // <3>
+              document.getMetadata().put("gameTitle", gameTitle.getNormalizedTitle()); 
             }).toList();
           }
 
