@@ -18,7 +18,7 @@ Then try it out by submitting a request to the API exposed by the application.
 Using `curl`:
 
 ```shell
-curl localhost:8080/ask?year=1981
+curl localhost:8080/topSongs?year=1981
 ```
 
 Or using HTTPie:

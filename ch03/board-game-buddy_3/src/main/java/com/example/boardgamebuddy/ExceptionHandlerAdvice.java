@@ -13,10 +13,8 @@ import java.util.List;
 public class ExceptionHandlerAdvice {
 
   @ExceptionHandler(MethodArgumentNotValidException.class)  
-  public ProblemDetail handleValidationExceptions(
-                              MethodArgumentNotValidException ex) {
-    var problemDetail =  ProblemDetail
-        .forStatusAndDetail(HttpStatus.BAD_REQUEST, "Validation failed");
+  public ProblemDetail handleValidationExceptions(MethodArgumentNotValidException ex) {
+    var problemDetail =  ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, "Validation failed");
 
     var validationMessages = ex.getBindingResult().getAllErrors()
         .stream()

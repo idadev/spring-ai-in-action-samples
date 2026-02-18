@@ -11,19 +11,14 @@ public class SpringAiBoardGameService implements BoardGameService {
   private final ChatClient chatClient;
   private final GameRulesService gameRulesService;
 
-  public SpringAiBoardGameService(
-      ChatClient.Builder chatClientBuilder,
-      GameRulesService gameRulesService) {
+  public SpringAiBoardGameService(ChatClient.Builder chatClientBuilder, GameRulesService gameRulesService) {
     this.chatClient = chatClientBuilder.build();
     this.gameRulesService = gameRulesService;
   }
-
   
   @Value("classpath:/promptTemplates/systemPromptTemplate.st")
   Resource promptTemplate;
-  
 
-  
   @Override
   public Answer askQuestion(Question question) {
     var gameRules = gameRulesService.getRulesFor(question.gameTitle());

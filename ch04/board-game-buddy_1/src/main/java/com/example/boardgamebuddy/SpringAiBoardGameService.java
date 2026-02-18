@@ -24,8 +24,7 @@ public class SpringAiBoardGameService implements BoardGameService {
   
   @Override
   public Answer askQuestion(Question question) {
-    var gameRules = gameRulesService.getRulesFor(
-        question.gameTitle(), question.question());
+    var gameRules = gameRulesService.getRulesFor(question.gameTitle(), question.question());
 
     var answer = chatClient.prompt()
         .system(systemSpec -> systemSpec

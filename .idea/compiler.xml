@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mcp-filesystem-client" />
+        <module name="rounting" />
+        <module name="simple-tools" />
+        <module name="game-rules-loader (2)" />
+        <module name="board-game-buddy (3)" />
+        <module name="board-game-buddy_2 (1)" />
+        <module name="board-game-buddy_1b" />
+        <module name="board-game-buddy_3 (1)" />
+        <module name="simple-translator" />
+        <module name="board-game-buddy_cassandra" />
+        <module name="mcp-client" />
+        <module name="board-game-buddy_1 (4)" />
+        <module name="chaining" />
+        <module name="game-rules-loader (5)" />
+        <module name="board-game-buddy_2 (2)" />
+        <module name="parallelization" />
+        <module name="game-rules-loader (1)" />
+        <module name="board-game-buddy_5" />
+        <module name="board-game-buddy (4)" />
+        <module name="board-game-buddy_6" />
+        <module name="game-rules-loader (6)" />
+        <module name="top-songs" />
+        <module name="sentiment-analysis" />
+        <module name="board-game-buddy_1 (3)" />
+        <module name="board-game-buddy_3" />
+        <module name="safegauard-advisor" />
+        <module name="board-game-buddy_4" />
+        <module name="board-game-buddy_1" />
+        <module name="board-game-buddy_2" />
+        <module name="canary-word-advisor" />
+        <module name="board-game-buddy_1 (7)" />
+        <module name="embabelègames-agent-mcp" />
+        <module name="game-rules-loader" />
+        <module name="game-rules-loader (4)" />
+        <module name="board-game-buddy_2 (3)" />
+        <module name="board-game-buddy (1)" />
+        <module name="board-game-buddy_1 (2)" />
+        <module name="mcp-client (1)" />
+        <module name="embabel-games-agent" />
+        <module name="routing-with-memory" />
+        <module name="board-game-buddy_1 (6)" />
+        <module name="game-rules-loader (3)" />
+        <module name="board-game-buddy_2 (4)" />
+        <module name="mcp-server" />
+        <module name="board-game-buddy (2)" />
+        <module name="mcp-server (1)" />
+        <module name="summerization" />
+        <module name="board-game-buddy_neo4j" />
+        <module name="board-game-buddy" />
+        <module name="prompt-chaining" />
+        <module name="board-game-buddy_jdbc" />
+        <module name="board-game-buddy_1 (5)" />
+        <module name="board-game-buddy_1 (1)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="board-game-buddy" options="-parameters" />
+      <module name="board-game-buddy (1)" options="-parameters" />
+      <module name="board-game-buddy (2)" options="-parameters" />
+      <module name="board-game-buddy (3)" options="-parameters" />
+      <module name="board-game-buddy (4)" options="-parameters" />
+      <module name="board-game-buddy_1" options="-parameters" />
+      <module name="board-game-buddy_1 (1)" options="-parameters" />
+      <module name="board-game-buddy_1 (2)" options="-parameters" />
+      <module name="board-game-buddy_1 (3)" options="-parameters" />
+      <module name="board-game-buddy_1 (4)" options="-parameters" />
+      <module name="board-game-buddy_1 (5)" options="-parameters" />
+      <module name="board-game-buddy_1 (6)" options="-parameters" />
+      <module name="board-game-buddy_1 (7)" options="-parameters" />
+      <module name="board-game-buddy_1b" options="-parameters" />
+      <module name="board-game-buddy_2" options="-parameters" />
+      <module name="board-game-buddy_2 (1)" options="-parameters" />
+      <module name="board-game-buddy_2 (2)" options="-parameters" />
+      <module name="board-game-buddy_2 (3)" options="-parameters" />
+      <module name="board-game-buddy_2 (4)" options="-parameters" />
+      <module name="board-game-buddy_3" options="-parameters" />
+      <module name="board-game-buddy_3 (1)" options="-parameters" />
+      <module name="board-game-buddy_4" options="-parameters" />
+      <module name="board-game-buddy_5" options="-parameters" />
+      <module name="board-game-buddy_6" options="-parameters" />
+      <module name="board-game-buddy_cassandra" options="-parameters" />
+      <module name="board-game-buddy_jdbc" options="-parameters" />
+      <module name="board-game-buddy_neo4j" options="-parameters" />
+      <module name="canary-word-advisor" options="-parameters" />
+      <module name="chaining" options="-parameters" />
+      <module name="embabel-games-agent" options="-parameters" />
+      <module name="embabelègames-agent-mcp" options="-parameters" />
+      <module name="game-rules-loader" options="-parameters" />
+      <module name="game-rules-loader (1)" options="-parameters" />
+      <module name="game-rules-loader (2)" options="-parameters" />
+      <module name="game-rules-loader (3)" options="-parameters" />
+      <module name="game-rules-loader (4)" options="-parameters" />
+      <module name="game-rules-loader (5)" options="-parameters" />
+      <module name="game-rules-loader (6)" options="-parameters" />
+      <module name="mcp-client" options="-parameters" />
+      <module name="mcp-client (1)" options="-parameters" />
+      <module name="mcp-filesystem-client" options="-parameters" />
+      <module name="mcp-server" options="-parameters" />
+      <module name="mcp-server (1)" options="-parameters" />
+      <module name="parallelization" options="-parameters" />
+      <module name="prompt-chaining" options="-parameters" />
+      <module name="rounting" options="-parameters" />
+      <module name="routing-with-memory" options="-parameters" />
+      <module name="safegauard-advisor" options="-parameters" />
+      <module name="sentiment-analysis" options="-parameters" />
+      <module name="simple-tools" options="-parameters" />
+      <module name="simple-translator" options="-parameters" />
+      <module name="summerization" options="-parameters" />
+      <module name="top-songs" options="-parameters" />
+    </option>
+  </component>
+</project>

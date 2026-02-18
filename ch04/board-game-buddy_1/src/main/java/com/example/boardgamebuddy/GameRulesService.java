@@ -22,15 +22,11 @@ public class GameRulesService {
     var searchRequest = SearchRequest
         .builder()
         .query(question)
-        .filterExpression(
-            new FilterExpressionBuilder()
-                .eq("gameTitle", normalizeGameTitle(gameName)).build())
-        .build(); 
+        .filterExpression(new FilterExpressionBuilder().eq("gameTitle", normalizeGameTitle(gameName)).build()).build();
 
     System.err.println("Search request: " + searchRequest);
 
-    var similarDocs =
-        vectorStore.similaritySearch(searchRequest); 
+    var similarDocs = vectorStore.similaritySearch(searchRequest);
 
     if (similarDocs.isEmpty()) {
       return "The rules for " + gameName + " are not available.";

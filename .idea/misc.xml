@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ch01/board-game-buddy/pom.xml" />
+        <option value="$PROJECT_DIR$/ch02/board-game-buddy/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/board-game-buddy_1/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/board-game-buddy_2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/prompt-chaining/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07/boardgamedb-mcp-stdio/mcp-client/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07/boardgamedb-mcp-stdio/mcp-server/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07/mcp-filesystem-client/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07/boardgamedb-mcp-sse/mcp-server/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07/boardgamedb-mcp-sse/mcp-client/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08/board-game-buddy_1/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08/board-game-buddy_1b/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08/board-game-buddy_2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch09/board-game-buddy/pom.xml" />
+        <option value="$PROJECT_DIR$/ch09/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/board-game-buddy_1/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/board-game-buddy_2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/board-game-buddy_3/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/canary-word-advisor/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/safeguard-advisor/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/board-game-buddy/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/sentiment-analysis/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/simple-translator/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/summarization/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/chaining/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/embabel-games-agent/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/embabel-games-agent-mcp/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/parallelization/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/routing/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/routing-with-memory/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06/simple-tools/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06/board-game-buddy_2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06/board-game-buddy/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/board-game-buddy_neo4j/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/board-game-buddy_jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/board-game-buddy_cassandra/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/board-game-buddy_3/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/board-game-buddy_2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/board-game-buddy_1/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/board-game-buddy_3/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/board-game-buddy_2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/board-game-buddy_1/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/top-songs/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/board-game-buddy_6/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/board-game-buddy_5/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/board-game-buddy_4/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/board-game-buddy_3/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

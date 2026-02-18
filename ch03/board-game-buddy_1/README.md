@@ -22,6 +22,11 @@ curl localhost:8080/ask -H"Content-type: application/json" \
      -d'{"game":"checkers", "question":"How many pieces are there?"}'
 ```
 
+Updade: 
+```shell
+curl localhost:8081/ask -H"Content-type: application/json" -d'{"gameTitle":"checkers", "question":"How many pieces are there?"}'
+```
+
 Or using HTTPie:
 
 ```shell

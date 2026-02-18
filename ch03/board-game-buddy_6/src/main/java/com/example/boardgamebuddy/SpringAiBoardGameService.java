@@ -14,8 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SpringAiBoardGameService implements BoardGameService {
 
-  private static final Logger log =
-      LoggerFactory.getLogger(SpringAiBoardGameService.class); 
+  private static final Logger log = LoggerFactory.getLogger(SpringAiBoardGameService.class);
 
   private final ChatClient chatClient;
   private final GameRulesService gameRulesService;

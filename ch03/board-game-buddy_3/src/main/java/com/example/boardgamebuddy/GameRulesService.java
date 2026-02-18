@@ -16,9 +16,7 @@ public class GameRulesService {
 
   public String getRulesFor(String gameName) {
     try {
-      var filename = String.format(
-          "classpath:/gameRules/%s.txt",
-          gameName.toLowerCase().replace(" ", "_"));
+      var filename = String.format("classpath:/gameRules/%s.txt", gameName.toLowerCase().replace(" ", "_"));
 
       return new DefaultResourceLoader()
           .getResource(filename)

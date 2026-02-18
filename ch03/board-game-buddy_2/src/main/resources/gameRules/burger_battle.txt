@@ -94,3 +94,7 @@ The joke expansion battle cards are:
 * Time to Eat!: Player must leave the game and not return until they have eaten a burger.
 
 The blank battle card can be used to create a Battle Card of your own design.
+
+
+== checkers
+C'est un jeu de stratégie qui s'appelle jeux d'échecs en français. Le but du jeu est de capturer tous les pions de l'adversaire ou de bloquer ses mouvements de sorte qu'il ne puisse plus jouer. Chaque joueur commence avec 12 pions placés sur les cases noires des trois premières rangées de son côté du plateau. Les pions se déplacent en diagonale vers l'avant et ne peuvent capturer que les pions adverses en sautant par-dessus eux. Lorsqu'un pion atteint la dernière rangée du côté adverse, il est promu en "dame" et peut se déplacer en avant et en arrière. Le jeu se termine lorsqu'un joueur capture tous les pions de l'adversaire ou bloque tous ses mouvements.

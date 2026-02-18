@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ch01/board-game-buddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch02/board-game-buddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/board-game-buddy_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/board-game-buddy_2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/board-game-buddy_3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/board-game-buddy_4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/board-game-buddy_5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/board-game-buddy_6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch03/top-songs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/board-game-buddy_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/board-game-buddy_2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/board-game-buddy_3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch04/game-rules-loader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05/board-game-buddy_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05/board-game-buddy_2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05/board-game-buddy_3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05/board-game-buddy_cassandra/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05/board-game-buddy_jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05/board-game-buddy_neo4j/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch05/game-rules-loader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/board-game-buddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/board-game-buddy_2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/game-rules-loader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch06/simple-tools/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-sse/mcp-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-sse/mcp-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-stdio/mcp-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-stdio/mcp-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07/mcp-filesystem-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch08/board-game-buddy_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch08/board-game-buddy_1b/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch08/board-game-buddy_2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch08/game-rules-loader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/board-game-buddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09/game-rules-loader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch10/board-game-buddy_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch10/board-game-buddy_2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch10/board-game-buddy_3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch10/canary-word-advisor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch10/game-rules-loader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch10/safeguard-advisor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch11/board-game-buddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch11/game-rules-loader/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch11/sentiment-analysis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch11/simple-translator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch11/summarization/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12/chaining/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12/embabel-games-agent-mcp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12/embabel-games-agent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12/parallelization/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12/prompt-chaining/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12/routing-with-memory/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12/routing/src/main/java" charset="UTF-8" />
+  </component>
+</project>
