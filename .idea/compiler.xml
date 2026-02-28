@@ -12,6 +12,7 @@
         <module name="game-rules-loader (2)" />
         <module name="board-game-buddy (3)" />
         <module name="board-game-buddy_2 (1)" />
+        <module name="mcp-server (2)" />
         <module name="board-game-buddy_1b" />
         <module name="board-game-buddy_3 (1)" />
         <module name="simple-translator" />
@@ -30,28 +31,43 @@
         <module name="top-songs" />
         <module name="sentiment-analysis" />
         <module name="board-game-buddy_1 (3)" />
+        <module name="ch3-4-board-game-buddy" />
         <module name="board-game-buddy_3" />
         <module name="safegauard-advisor" />
         <module name="board-game-buddy_4" />
         <module name="board-game-buddy_1" />
+        <module name="mcp-client (2)" />
         <module name="board-game-buddy_2" />
+        <module name="ch2-4-2-board-game-buddy" />
         <module name="canary-word-advisor" />
+        <module name="ch2-4-1-board-game-buddy" />
+        <module name="ch2-2-board-game-buddy" />
         <module name="board-game-buddy_1 (7)" />
         <module name="embabelègames-agent-mcp" />
+        <module name="ch4-5-2-board-game-buddy" />
         <module name="game-rules-loader" />
         <module name="game-rules-loader (4)" />
         <module name="board-game-buddy_2 (3)" />
+        <module name="ch2-3-board-game-buddy" />
+        <module name="ch3-3-game-rules-loader" />
         <module name="board-game-buddy (1)" />
+        <module name="ch4-5-1-board-game-buddy" />
+        <module name="ch2-1-board-game-buddy" />
+        <module name="board-game-buddy (5)" />
         <module name="board-game-buddy_1 (2)" />
         <module name="mcp-client (1)" />
         <module name="embabel-games-agent" />
         <module name="routing-with-memory" />
+        <module name="embabel-games-agent-mcp" />
+        <module name="ch3-5-2-board-game-buddy" />
         <module name="board-game-buddy_1 (6)" />
         <module name="game-rules-loader (3)" />
         <module name="board-game-buddy_2 (4)" />
         <module name="mcp-server" />
+        <module name="ch3-5-board-game-buddy" />
         <module name="board-game-buddy (2)" />
         <module name="mcp-server (1)" />
+        <module name="ch4-2-3-4-board-game-buddy" />
         <module name="summerization" />
         <module name="board-game-buddy_neo4j" />
         <module name="board-game-buddy" />
@@ -69,6 +85,7 @@
       <module name="board-game-buddy (2)" options="-parameters" />
       <module name="board-game-buddy (3)" options="-parameters" />
       <module name="board-game-buddy (4)" options="-parameters" />
+      <module name="board-game-buddy (5)" options="-parameters" />
       <module name="board-game-buddy_1" options="-parameters" />
       <module name="board-game-buddy_1 (1)" options="-parameters" />
       <module name="board-game-buddy_1 (2)" options="-parameters" />
@@ -92,8 +109,21 @@
       <module name="board-game-buddy_jdbc" options="-parameters" />
       <module name="board-game-buddy_neo4j" options="-parameters" />
       <module name="canary-word-advisor" options="-parameters" />
+      <module name="ch2-1-board-game-buddy" options="-parameters" />
+      <module name="ch2-2-board-game-buddy" options="-parameters" />
+      <module name="ch2-3-board-game-buddy" options="-parameters" />
+      <module name="ch2-4-1-board-game-buddy" options="-parameters" />
+      <module name="ch2-4-2-board-game-buddy" options="-parameters" />
+      <module name="ch3-3-game-rules-loader" options="-parameters" />
+      <module name="ch3-4-board-game-buddy" options="-parameters" />
+      <module name="ch3-5-2-board-game-buddy" options="-parameters" />
+      <module name="ch3-5-board-game-buddy" options="-parameters" />
+      <module name="ch4-2-3-4-board-game-buddy" options="-parameters" />
+      <module name="ch4-5-1-board-game-buddy" options="-parameters" />
+      <module name="ch4-5-2-board-game-buddy" options="-parameters" />
       <module name="chaining" options="-parameters" />
       <module name="embabel-games-agent" options="-parameters" />
+      <module name="embabel-games-agent-mcp" options="-parameters" />
       <module name="embabelègames-agent-mcp" options="-parameters" />
       <module name="game-rules-loader" options="-parameters" />
       <module name="game-rules-loader (1)" options="-parameters" />
@@ -104,9 +134,11 @@
       <module name="game-rules-loader (6)" options="-parameters" />
       <module name="mcp-client" options="-parameters" />
       <module name="mcp-client (1)" options="-parameters" />
+      <module name="mcp-client (2)" options="-parameters" />
       <module name="mcp-filesystem-client" options="-parameters" />
       <module name="mcp-server" options="-parameters" />
       <module name="mcp-server (1)" options="-parameters" />
+      <module name="mcp-server (2)" options="-parameters" />
       <module name="parallelization" options="-parameters" />
       <module name="prompt-chaining" options="-parameters" />
       <module name="rounting" options="-parameters" />

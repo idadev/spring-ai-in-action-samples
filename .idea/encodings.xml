@@ -25,11 +25,11 @@
     <file url="file://$PROJECT_DIR$/ch06/board-game-buddy_2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch06/game-rules-loader/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch06/simple-tools/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-sse/mcp-client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-sse/mcp-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-stdio/mcp-client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ch07/boardgamedb-mcp-stdio/mcp-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ch07/mcp-filesystem-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-mcp/boardgamedb-mcp-sse/mcp-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-mcp/boardgamedb-mcp-sse/mcp-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-mcp/boardgamedb-mcp-stdio/mcp-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-mcp/boardgamedb-mcp-stdio/mcp-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-mcp/mcp-filesystem-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch08/board-game-buddy_1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch08/board-game-buddy_1b/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ch08/board-game-buddy_2/src/main/java" charset="UTF-8" />
