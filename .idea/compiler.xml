@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="simple-tools" />
         <module name="board-game-buddy_3 (1)" />
         <module name="board-game-buddy_cassandra" />
         <module name="mcp-client" />
@@ -75,7 +76,6 @@
       <module name="routing-with-memory" target="21" />
       <module name="safegauard-advisor" target="21" />
       <module name="sentiment-analysis" target="21" />
-      <module name="simple-tools" target="21" />
       <module name="simple-translator" target="21" />
       <module name="summerization" target="21" />
     </bytecodeTargetLevel>

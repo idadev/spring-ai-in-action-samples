@@ -57,6 +57,10 @@
         <option value="$PROJECT_DIR$/ch03/board-game-buddy_5/pom.xml" />
         <option value="$PROJECT_DIR$/ch03/board-game-buddy_4/pom.xml" />
         <option value="$PROJECT_DIR$/ch03/board-game-buddy_3/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-tools/board-game-buddy_2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-tools/board-game-buddy/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-tools/game-rules-loader/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-tools/simple-tools/pom.xml" />
       </list>
     </option>
   </component>
