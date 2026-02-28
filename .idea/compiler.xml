@@ -6,77 +6,79 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mcp-filesystem-client" />
-        <module name="rounting" />
-        <module name="simple-tools" />
-        <module name="game-rules-loader (2)" />
-        <module name="board-game-buddy (3)" />
-        <module name="board-game-buddy_2 (1)" />
-        <module name="mcp-server (2)" />
-        <module name="board-game-buddy_1b" />
         <module name="board-game-buddy_3 (1)" />
-        <module name="simple-translator" />
         <module name="board-game-buddy_cassandra" />
         <module name="mcp-client" />
         <module name="board-game-buddy_1 (4)" />
-        <module name="chaining" />
-        <module name="game-rules-loader (5)" />
-        <module name="board-game-buddy_2 (2)" />
-        <module name="parallelization" />
         <module name="game-rules-loader (1)" />
         <module name="board-game-buddy_5" />
-        <module name="board-game-buddy (4)" />
         <module name="board-game-buddy_6" />
-        <module name="game-rules-loader (6)" />
         <module name="top-songs" />
-        <module name="sentiment-analysis" />
         <module name="board-game-buddy_1 (3)" />
         <module name="ch3-4-board-game-buddy" />
-        <module name="board-game-buddy_3" />
-        <module name="safegauard-advisor" />
         <module name="board-game-buddy_4" />
         <module name="board-game-buddy_1" />
-        <module name="mcp-client (2)" />
         <module name="board-game-buddy_2" />
         <module name="ch2-4-2-board-game-buddy" />
-        <module name="canary-word-advisor" />
         <module name="ch2-4-1-board-game-buddy" />
         <module name="ch2-2-board-game-buddy" />
         <module name="board-game-buddy_1 (7)" />
         <module name="embabelègames-agent-mcp" />
         <module name="ch4-5-2-board-game-buddy" />
         <module name="game-rules-loader" />
-        <module name="game-rules-loader (4)" />
-        <module name="board-game-buddy_2 (3)" />
         <module name="ch2-3-board-game-buddy" />
         <module name="ch3-3-game-rules-loader" />
         <module name="board-game-buddy (1)" />
         <module name="ch4-5-1-board-game-buddy" />
         <module name="ch2-1-board-game-buddy" />
-        <module name="board-game-buddy (5)" />
-        <module name="board-game-buddy_1 (2)" />
-        <module name="mcp-client (1)" />
-        <module name="embabel-games-agent" />
-        <module name="routing-with-memory" />
-        <module name="embabel-games-agent-mcp" />
         <module name="ch3-5-2-board-game-buddy" />
         <module name="board-game-buddy_1 (6)" />
-        <module name="game-rules-loader (3)" />
         <module name="board-game-buddy_2 (4)" />
         <module name="mcp-server" />
         <module name="ch3-5-board-game-buddy" />
         <module name="board-game-buddy (2)" />
-        <module name="mcp-server (1)" />
         <module name="ch4-2-3-4-board-game-buddy" />
-        <module name="summerization" />
         <module name="board-game-buddy_neo4j" />
         <module name="board-game-buddy" />
-        <module name="prompt-chaining" />
         <module name="board-game-buddy_jdbc" />
         <module name="board-game-buddy_1 (5)" />
-        <module name="board-game-buddy_1 (1)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="board-game-buddy (3)" target="21" />
+      <module name="board-game-buddy (4)" target="21" />
+      <module name="board-game-buddy (5)" target="21" />
+      <module name="board-game-buddy_1 (1)" target="21" />
+      <module name="board-game-buddy_1 (2)" target="21" />
+      <module name="board-game-buddy_1b" target="21" />
+      <module name="board-game-buddy_2 (1)" target="21" />
+      <module name="board-game-buddy_2 (2)" target="21" />
+      <module name="board-game-buddy_2 (3)" target="21" />
+      <module name="board-game-buddy_3" target="21" />
+      <module name="canary-word-advisor" target="21" />
+      <module name="chaining" target="21" />
+      <module name="embabel-games-agent" target="21" />
+      <module name="embabel-games-agent-mcp" target="21" />
+      <module name="game-rules-loader (2)" target="21" />
+      <module name="game-rules-loader (3)" target="21" />
+      <module name="game-rules-loader (4)" target="21" />
+      <module name="game-rules-loader (5)" target="21" />
+      <module name="game-rules-loader (6)" target="21" />
+      <module name="mcp-client (1)" target="21" />
+      <module name="mcp-client (2)" target="21" />
+      <module name="mcp-filesystem-client" target="21" />
+      <module name="mcp-server (1)" target="21" />
+      <module name="mcp-server (2)" target="21" />
+      <module name="parallelization" target="21" />
+      <module name="prompt-chaining" target="21" />
+      <module name="rounting" target="21" />
+      <module name="routing-with-memory" target="21" />
+      <module name="safegauard-advisor" target="21" />
+      <module name="sentiment-analysis" target="21" />
+      <module name="simple-tools" target="21" />
+      <module name="simple-translator" target="21" />
+      <module name="summerization" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
