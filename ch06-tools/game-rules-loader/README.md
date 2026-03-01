@@ -1,6 +1,6 @@
 # Game Rules Loader
 A Spring Boot application that loads a vector store from files dropped into
-a directory. This was developed in chapter 3, section 3.3 of Spring AI in Action.
+a directory. This was developed in chapter 4, section 4.3 of Spring AI in Action.
 It is duplicated here with chapter 5 code for convenience. Nothing has changed
 in this project since chapter 3.
 
